@@ -25,3 +25,38 @@ int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo){
     }
     return somatorio/size;
 }
+
+void imprimeBancoUsuarios(Vector * listaUsuarios){
+    int i =0, tamanho = 0;
+
+    printf("----- BANCO DE USUARIOS -----\n");
+    tamanho  = VectorSize(listaUsuarios);
+    for(i = 0; i < tamanho; i++){
+        imprimeElementoVetorDeIdx(listaUsuarios, notificaUsuario, i);
+    }
+    printf("----------------------------\n");
+}      
+
+void imprimeBancoTecnicos(Vector * listaTec){
+    int i = 0, tamanho = 0;
+    printf("----- BANCO DE TECNICOS -----\n");
+    tamanho = VectorSize(listaTec);
+    for(i = 0; i < tamanho; i++){
+        imprimeElementoVetorDeIdx(listaTec, notificaTecnico, i);
+    }
+    printf("----------------------------\n");
+}
+
+void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila){
+    int mediaIdadeTec = 0, mediaIdadeUser = 0;
+    mediaIdadeTec = calculaMediaIdadePorTipo(listaTec, TECNICO);
+    mediaIdadeUser = calculaMediaIdadePorTipo(listaUsuarios, USUARIO);
+
+    printf("----- RELATORIO GERAL -----\n");
+        
+    printf("- Qtd tickets: %d\n- Qtd tickets (A): %d\n- Qtd tickets (F): %d\n", getQtdTicketsNaFila(fila), getQtdTicketsPorStatusNaFila(fila, 'A'), getQtdTicketsPorStatusNaFila(fila, 'F'));
+        
+    printf("- Qtd usuarios: %d\n- Md idade usuarios: %d\n- Qtd tecnicos: %d\n- Md idade tecnicos: %d\n- Md trabalho tecnicos: %d\n---------------------------\n", VectorSize(listaUsuarios), mediaIdadeUser, VectorSize(listaTec),mediaIdadeTec, 0);
+}
+
+

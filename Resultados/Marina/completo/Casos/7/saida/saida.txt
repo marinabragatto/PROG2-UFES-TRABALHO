@@ -106,3 +106,45 @@
 - Disponibilidade: 22h
 - Tempo Trabalhado: 0h
 ----------------------------
+----- BANCO DE TECNICOS -----
+--------------------
+- Nome: ZED SILVA
+- CPF: 123.456.789-01
+- Data de Nascimento: 15/3/1985
+- Telefone: (11)98765-4321
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 4000.00
+- Disponibilidade: 30h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: AHRI COSTA
+- CPF: 234.567.890-12
+- Data de Nascimento: 22/7/1990
+- Telefone: (21)91234-5678
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 4800.00
+- Disponibilidade: 25h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: YASUO FERREIRA
+- CPF: 345.678.901-23
+- Data de Nascimento: 10/5/1982
+- Telefone: (31)92345-6789
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 5200.00
+- Disponibilidade: 40h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: GAREN SANTOS
+- CPF: 901.234.567-89
+- Data de Nascimento: 14/8/1983
+- Telefone: (91)98901-2345
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4300.00
+- Disponibilidade: 22h
+- Tempo Trabalhado: 0h
+----------------------------

@@ -10,8 +10,9 @@
 #include "usuario.h"
 #include "vetor.h"
 #include "mainsuport.h"
+#include "funcoesmenu.h"
 
-#define TAM_MAX_OPERACAO 30
+
 
 int main(){
     char op = 'a';
@@ -29,79 +30,16 @@ int main(){
             break;
         }
         if(op == 'T'){
-            Tecnico * tec;
-            tec = lerTecnico();
-            VectorPushBack(listaTec, tec);
+            listaTec = operacaoT(listaTec);
         }
         if(op == 'U'){
-            Usuario * user;
-            user = lerUsuario(listaUsuarios, user);
-            VectorPushBack(listaUsuarios, user);
+            listaUsuarios = operacaoU(listaUsuarios);
         }
         if(op == 'E'){
-            char operacao[TAM_MAX_OPERACAO];
-            scanf("%[^\n]",operacao);
-            scanf("%*[\n]");
-
-            int tamanho = 0, i = 0;
-            if(strcmp(operacao, "USUARIOS")==0){
-                printf("----- BANCO DE USUARIOS -----\n");
-                tamanho  = VectorSize(listaUsuarios);
-                for(i = 0; i < tamanho; i++){
-                    imprimeElementoVetorDeIdx(listaUsuarios, notificaUsuario, i);
-                }
-                printf("----------------------------\n");
-
-            }
-            if(strcmp(operacao, "TECNICOS")==0){
-                printf("----- BANCO DE TECNICOS -----\n");
-                tamanho = VectorSize(listaTec);
-                for(i = 0; i < tamanho; i++){
-                    imprimeElementoVetorDeIdx(listaTec, notificaTecnico, i);
-                }
-                printf("----------------------------\n");
-            }
-            
-            if(strcmp(operacao, "RELATORIO")==0){
-                int mediaIdadeTec = 0, mediaIdadeUser = 0;
-                mediaIdadeTec = calculaMediaIdadePorTipo(listaTec, TECNICO);
-                mediaIdadeUser = calculaMediaIdadePorTipo(listaUsuarios, USUARIO);
-
-                printf("----- RELATORIO GERAL -----\n");
-                
-                printf("- Qtd tickets: %d\n- Qtd tickets (A): %d\n- Qtd tickets (F): %d\n", getQtdTicketsNaFila(fila), getQtdTicketsPorStatusNaFila(fila, 'A'), getQtdTicketsPorStatusNaFila(fila, 'F'));
-                
-                printf("- Qtd usuarios: %d\n- Md idade usuarios: %d\n- Qtd tecnicos: %d\n- Md idade tecnicos: %d\n- Md trabalho tecnicos: %d\n---------------------------\n", VectorSize(listaUsuarios), mediaIdadeUser, VectorSize(listaTec),mediaIdadeTec, 0);
-            }
-         
-
-            
-            
+            operacaoE(listaTec, listaUsuarios, fila);
         }
         if(op == 'A'){
-            char cpf[MAX_TAM_CPF_USER];
-            char tipo[TAM_MAX_OPERACAO];
-
-            scanf("%[^\n]", cpf);
-            scanf("%*[\n]");
-            scanf("%[^\n]", tipo);
-            scanf("%*[\n]");
-
-            if(strcmp(tipo, "OUTROS")==0){
-                Outros * out;
-                out = lerOutros();
-                insereTicketFila(fila, cpf, out, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
-                
-               // notificaTicket(getTicketNaFila(fila, 0));
-            }
-            else if(strcmp(tipo, "SOFTWARE")==0){
-                
-            }
-            else if(strcmp(tipo, "MANUTENCAO")==0){
-                
-            }
-
-        
+            fila = operacaoA(fila);
         }
     }
 

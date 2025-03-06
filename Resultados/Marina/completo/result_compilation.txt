@@ -2,6 +2,58 @@ fila.c: In function ‘getQtdTicketsNaFila’:
 fila.c:94:9: warning: unused variable ‘i’ [-Wunused-variable]
    94 |     int i = 0;
       |         ^
+funcoesmenu.c: In function ‘operacaoE’:
+funcoesmenu.c:35:51: warning: passing argument 3 of ‘imprimeRelatorio’ from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |         imprimeRelatorio(listaTec, listaUsuarios, fila);
+      |                                                   ^~~~
+      |                                                   |
+      |                                                   Fila *
+In file included from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+mainsuport.h:26:75: note: expected ‘Vector *’ but argument is of type ‘Fila *’
+   26 | void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila);
+      |                                                                  ~~~~~~~~~^~~~
+funcoesmenu.c:24:22: warning: unused variable ‘i’ [-Wunused-variable]
+   24 |     int tamanho = 0, i = 0;
+      |                      ^
+funcoesmenu.c:24:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
+   24 |     int tamanho = 0, i = 0;
+      |         ^~~~~~~
+funcoesmenu.c: In function ‘operacaoU’:
+funcoesmenu.c:14:12: warning: ‘user’ is used uninitialized [-Wuninitialized]
+   14 |     user = lerUsuario(usuarios, user);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+mainsuport.c: In function ‘imprimeRelatorio’:
+mainsuport.c:57:101: warning: passing argument 1 of ‘getQtdTicketsNaFila’ from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |     printf("- Qtd tickets: %d\n- Qtd tickets (A): %d\n- Qtd tickets (F): %d\n", getQtdTicketsNaFila(fila), getQtdTicketsPorStatusNaFila(fila, 'A'), getQtdTicketsPorStatusNaFila(fila, 'F'));
+      |                                                                                                     ^~~~
+      |                                                                                                     |
+      |                                                                                                     Vector *
+In file included from mainsuport.h:7,
+                 from mainsuport.c:1:
+fila.h:46:31: note: expected ‘Fila *’ but argument is of type ‘Vector *’
+   46 | int getQtdTicketsNaFila(Fila *f);
+      |                         ~~~~~~^
+mainsuport.c:57:137: warning: passing argument 1 of ‘getQtdTicketsPorStatusNaFila’ from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |     printf("- Qtd tickets: %d\n- Qtd tickets (A): %d\n- Qtd tickets (F): %d\n", getQtdTicketsNaFila(fila), getQtdTicketsPorStatusNaFila(fila, 'A'), getQtdTicketsPorStatusNaFila(fila, 'F'));
+      |                                                                                                                                         ^~~~
+      |                                                                                                                                         |
+      |                                                                                                                                         Vector *
+In file included from mainsuport.h:7,
+                 from mainsuport.c:1:
+fila.h:54:40: note: expected ‘Fila *’ but argument is of type ‘Vector *’
+   54 | int getQtdTicketsPorStatusNaFila(Fila *f, char status);
+      |                                  ~~~~~~^
+mainsuport.c:57:178: warning: passing argument 1 of ‘getQtdTicketsPorStatusNaFila’ from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |     printf("- Qtd tickets: %d\n- Qtd tickets (A): %d\n- Qtd tickets (F): %d\n", getQtdTicketsNaFila(fila), getQtdTicketsPorStatusNaFila(fila, 'A'), getQtdTicketsPorStatusNaFila(fila, 'F'));
+      |                                                                                                                                                                                  ^~~~
+      |                                                                                                                                                                                  |
+      |                                                                                                                                                                                  Vector *
+In file included from mainsuport.h:7,
+                 from mainsuport.c:1:
+fila.h:54:40: note: expected ‘Fila *’ but argument is of type ‘Vector *’
+   54 | int getQtdTicketsPorStatusNaFila(Fila *f, char status);
+      |                                  ~~~~~~^
 ticket.c: In function ‘getStatusTicket’:
 ticket.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
   123 | }

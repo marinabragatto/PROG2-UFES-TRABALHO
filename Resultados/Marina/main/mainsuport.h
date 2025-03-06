@@ -13,11 +13,17 @@
 #include "usuario.h"
 #include "vetor.h"
 
+#define TAM_MAX_OPERACAO 30
+
 typedef enum {
     TECNICO,
     USUARIO
 } FuncaoTipo;
 
 int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo);
+void imprimeBancoUsuarios(Vector * listaUsuarios);
+void imprimeBancoTecnicos(Vector * listaTec);
+void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila);
+
 
 #endif
