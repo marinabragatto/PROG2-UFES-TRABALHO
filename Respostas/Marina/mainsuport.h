@@ -21,6 +21,8 @@ typedef enum {
 } FuncaoTipo;
 
 int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo);
+int calculaMediaHorasTrabalhadasTecnicos(Vector * listaTec);
+
 void imprimeBancoUsuarios(Vector * listaUsuarios);
 void imprimeBancoTecnicos(Vector * listaTec);
 void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila);
