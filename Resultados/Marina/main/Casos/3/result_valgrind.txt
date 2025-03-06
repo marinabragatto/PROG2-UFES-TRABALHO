@@ -1,0 +1,54 @@
+==222874== Memcheck, a memory error detector
+==222874== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==222874== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==222874== Command: Resultados/Marina/main/prog Resultados/Marina/main/Casos/3
+==222874== Parent PID: 222873
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC50: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC50: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC6A: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC84: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC23: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC23: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC36: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 
+==222874== Conditional jump or move depends on uninitialised value(s)
+==222874==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==222874==    by 0x10AC36: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x10AE13: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874==    by 0x1097AA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==222874== 

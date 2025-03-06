@@ -1,0 +1,60 @@
+==223993== Memcheck, a memory error detector
+==223993== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==223993== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==223993== Command: Resultados/Marina/completo/prog Resultados/Marina/completo/Casos/3
+==223993== Parent PID: 223991
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD38: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD38: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD52: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD52: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD6C: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD0B: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD0B: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE72: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD1E: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 
+==223993== Conditional jump or move depends on uninitialised value(s)
+==223993==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==223993==    by 0x10AD1E: criaUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x10AEFB: lerUsuario (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993==    by 0x109806: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
+==223993== 

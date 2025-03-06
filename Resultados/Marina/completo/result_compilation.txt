@@ -1,0 +1,8 @@
+fila.c: In function ‘getQtdTicketsNaFila’:
+fila.c:94:9: warning: unused variable ‘i’ [-Wunused-variable]
+   94 |     int i = 0;
+      |         ^
+ticket.c: In function ‘getStatusTicket’:
+ticket.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
+  123 | }
+      | ^
