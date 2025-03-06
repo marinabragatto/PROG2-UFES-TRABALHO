@@ -30,6 +30,8 @@ int comparaDoisTecnicos(Tecnico * tecnico1, Tecnico * tecnico2);
 
 int getIdadeTecnico(Tecnico * tecnico);
 
+int getTempoTrabalhadoTecnicos(Tecnico * tecnico);
+
 
 /*
 T (caractere indicando cadastro de um técnico) 

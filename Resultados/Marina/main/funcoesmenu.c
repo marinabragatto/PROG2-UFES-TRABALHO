@@ -34,6 +34,27 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
     if(strcmp(operacao, "RELATORIO")==0){
         imprimeRelatorio(listaTec, listaUsuarios, fila);
     }
+    if(strcmp(operacao, "DISTRIBUI")==0){
+        
+    }
+    if(strcmp(operacao, "NOTIFICA")==0){
+        
+    }
+    if(strcmp(operacao, "RANKING TECNICOS")==0){
+        
+    }
+
+    /*
+    E
+DISTRIBUI
+E
+NOTIFICA
+E
+RANKING TECNICOS
+E
+RELATORIO
+    
+    */
     
 
 }

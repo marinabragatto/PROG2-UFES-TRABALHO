@@ -139,3 +139,7 @@ int getIdadeTecnico(Tecnico * tecnico){
     liberaData(dataReferencia);
     return ano;
 }
+
+int getTempoTrabalhadoTecnicos(Tecnico * tecnico){
+    return tecnico->tempoTrabalhado;
+}
