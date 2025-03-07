@@ -146,12 +146,12 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta main / Caso 3:
  - Arquivo de output gerado: Resultados/Marina/main/Casos/3/result_valgrind.txt.
- - Valgrind: Ok! allocs: 43, frees: 43, errors: 0 | Desconto do valgrind: 0.0%
+ - Valgrind: Ok! allocs: 40, frees: 40, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 4:
  - Arquivo de output gerado: Resultados/Marina/main/Casos/4/result_valgrind.txt.
- - Valgrind: Ok! allocs: 41, frees: 41, errors: 0 | Desconto do valgrind: 0.0%
+ - Valgrind: Ok! allocs: 32, frees: 32, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 5:
@@ -188,12 +188,12 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta completo / Caso 3:
  - Arquivo de output gerado: Resultados/Marina/completo/Casos/3/result_valgrind.txt.
- - Valgrind: Ok! allocs: 39, frees: 39, errors: 0 | Desconto do valgrind: 0.0%
+ - Valgrind: Ok! allocs: 37, frees: 37, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 4:
  - Arquivo de output gerado: Resultados/Marina/completo/Casos/4/result_valgrind.txt.
- - Valgrind: Ok! allocs: 39, frees: 39, errors: 0 | Desconto do valgrind: 0.0%
+ - Valgrind: Ok! allocs: 33, frees: 33, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 5:

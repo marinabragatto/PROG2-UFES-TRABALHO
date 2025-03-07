@@ -65,7 +65,7 @@ void imprimeBancoTecnicos(Vector * listaTec){
     printf("----------------------------\n");
 }
 
-void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila){
+void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
     int mediaIdadeTec = 0, mediaIdadeUser = 0, mediaHorasTrabTec = 0;
     mediaIdadeTec = calculaMediaIdadePorTipo(listaTec, TECNICO);
     mediaIdadeUser = calculaMediaIdadePorTipo(listaUsuarios, USUARIO);
@@ -78,4 +78,10 @@ void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Vector * fila){
     printf("- Qtd usuarios: %d\n- Md idade usuarios: %d\n- Qtd tecnicos: %d\n- Md idade tecnicos: %d\n- Md trabalho tecnicos: %d\n---------------------------\n", VectorSize(listaUsuarios), mediaIdadeUser, VectorSize(listaTec),mediaIdadeTec, mediaHorasTrabTec);
 }
 
+void imprimeFilaTickets(Fila * fila){
+    printf("\n----- FILA DE TICKETS -----\n");
+    int i = 0;
+    notificaFila(fila);
+    printf("---------------------------\n");
+}
 

@@ -26,5 +26,7 @@ int comparaDoisUsuarios(Usuario * user1, Usuario * user2);
 
 int getIdadeUsuarios(Usuario * user);
 
+char * getSetorUsuario(Usuario * user);
+
 
 #endif

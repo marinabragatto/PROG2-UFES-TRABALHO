@@ -106,6 +106,167 @@
 - Disponibilidade: 22h
 - Tempo Trabalhado: 0h
 ----------------------------
+
+----- FILA DE TICKETS -----
+---------TICKET-----------
+- ID: Tick-1
+- Usuario solicitante: 468.357.912-35
+- Tipo: Outros
+- Descricao: LAMPADA PISCANDO CONSTANTEMENTE NO CORREDOR
+- Local: CORREDOR PRINCIPAL
+- Nível de Dificuldade: 3
+- Tempo estimado: 3h
+- Status: Aberto
+-------------------------
+---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 680.579.134-57
+- Tipo: Outros
+- Descricao: CACHORRO ABANDONADO PERTO DA PORTARIA
+- Local: PORTARIA PRINCIPAL
+- Nível de Dificuldade: 1
+- Tempo estimado: 1h
+- Status: Aberto
+-------------------------
+---------TICKET-----------
+- ID: Tick-3
+- Usuario solicitante: 468.357.912-35
+- Tipo: Manutencao
+- Nome do item: AR CONDICIONADO
+- Estado de conservacao: RUIM
+- Local: SALA 15 BLOCO A
+- Tempo estimado: 3h
+- Status: Aberto
+-------------------------
+---------TICKET-----------
+- ID: Tick-4
+- Usuario solicitante: 791.680.245-68
+- Tipo: Software
+- Nome do software: OUTLOOK
+- Categoria: BUG
+- Nível do impacto: 4
+- Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
+- Tempo estimado: 7h
+- Status: Aberto
+-------------------------
+---------TICKET-----------
+- ID: Tick-5
+- Usuario solicitante: 246.135.790-13
+- Tipo: Software
+- Nome do software: SISTEMA DE PONTO
+- Categoria: BUG
+- Nível do impacto: 5
+- Motivo: SISTEMA DE PONTO MOSTRANDO A HORA ERRADA
+- Tempo estimado: 8h
+- Status: Aberto
+-------------------------
+---------------------------
+esse cara pegou esse ticket
+
+
+!!!---------TICKET-----------
+- ID: Tick-1
+- Usuario solicitante: 468.357.912-35
+- Tipo: Outros
+- Descricao: LAMPADA PISCANDO CONSTANTEMENTE NO CORREDOR
+- Local: CORREDOR PRINCIPAL
+- Nível de Dificuldade: 3
+- Tempo estimado: 3h
+- Status: Finalizado
+-------------------------
+--------------------
+- Nome: ZED SILVA
+- CPF: 123.456.789-01
+- Data de Nascimento: 15/3/1985
+- Telefone: (11)98765-4321
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 4000.00
+- Disponibilidade: 27h
+- Tempo Trabalhado: 3h
+FIM!!!
+
+
+esse cara pegou esse ticket
+
+
+!!!---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 680.579.134-57
+- Tipo: Outros
+- Descricao: CACHORRO ABANDONADO PERTO DA PORTARIA
+- Local: PORTARIA PRINCIPAL
+- Nível de Dificuldade: 1
+- Tempo estimado: 1h
+- Status: Finalizado
+-------------------------
+--------------------
+- Nome: AHRI COSTA
+- CPF: 234.567.890-12
+- Data de Nascimento: 22/7/1990
+- Telefone: (21)91234-5678
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 4800.00
+- Disponibilidade: 24h
+- Tempo Trabalhado: 1h
+FIM!!!
+
+
+esse cara pegou esse ticket
+
+
+!!!---------TICKET-----------
+- ID: Tick-4
+- Usuario solicitante: 791.680.245-68
+- Tipo: Software
+- Nome do software: OUTLOOK
+- Categoria: BUG
+- Nível do impacto: 4
+- Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
+- Tempo estimado: 7h
+- Status: Finalizado
+-------------------------
+--------------------
+- Nome: YASUO FERREIRA
+- CPF: 345.678.901-23
+- Data de Nascimento: 10/5/1982
+- Telefone: (31)92345-6789
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 5200.00
+- Disponibilidade: 33h
+- Tempo Trabalhado: 7h
+FIM!!!
+
+
+esse cara pegou esse ticket
+
+
+!!!---------TICKET-----------
+- ID: Tick-5
+- Usuario solicitante: 246.135.790-13
+- Tipo: Software
+- Nome do software: SISTEMA DE PONTO
+- Categoria: BUG
+- Nível do impacto: 5
+- Motivo: SISTEMA DE PONTO MOSTRANDO A HORA ERRADA
+- Tempo estimado: 8h
+- Status: Finalizado
+-------------------------
+--------------------
+- Nome: GAREN SANTOS
+- CPF: 901.234.567-89
+- Data de Nascimento: 14/8/1983
+- Telefone: (91)98901-2345
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4300.00
+- Disponibilidade: 14h
+- Tempo Trabalhado: 8h
+FIM!!!
+
+
 ----- BANCO DE TECNICOS -----
 --------------------
 - Nome: ZED SILVA
@@ -115,8 +276,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 4000.00
-- Disponibilidade: 30h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 27h
+- Tempo Trabalhado: 3h
 --------------------
 - Nome: AHRI COSTA
 - CPF: 234.567.890-12
@@ -125,8 +286,8 @@
 - Genero: FEMININO
 - Area de Atuacao: GERAL
 - Salario: 4800.00
-- Disponibilidade: 25h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 24h
+- Tempo Trabalhado: 1h
 --------------------
 - Nome: YASUO FERREIRA
 - CPF: 345.678.901-23
@@ -135,8 +296,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 40h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 33h
+- Tempo Trabalhado: 7h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -145,6 +306,61 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 4300.00
-- Disponibilidade: 22h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 14h
+- Tempo Trabalhado: 8h
 ----------------------------
+
+----- FILA DE TICKETS -----
+---------TICKET-----------
+- ID: Tick-1
+- Usuario solicitante: 468.357.912-35
+- Tipo: Outros
+- Descricao: LAMPADA PISCANDO CONSTANTEMENTE NO CORREDOR
+- Local: CORREDOR PRINCIPAL
+- Nível de Dificuldade: 3
+- Tempo estimado: 3h
+- Status: Finalizado
+-------------------------
+---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 680.579.134-57
+- Tipo: Outros
+- Descricao: CACHORRO ABANDONADO PERTO DA PORTARIA
+- Local: PORTARIA PRINCIPAL
+- Nível de Dificuldade: 1
+- Tempo estimado: 1h
+- Status: Finalizado
+-------------------------
+---------TICKET-----------
+- ID: Tick-3
+- Usuario solicitante: 468.357.912-35
+- Tipo: Manutencao
+- Nome do item: AR CONDICIONADO
+- Estado de conservacao: RUIM
+- Local: SALA 15 BLOCO A
+- Tempo estimado: 3h
+- Status: Aberto
+-------------------------
+---------TICKET-----------
+- ID: Tick-4
+- Usuario solicitante: 791.680.245-68
+- Tipo: Software
+- Nome do software: OUTLOOK
+- Categoria: BUG
+- Nível do impacto: 4
+- Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
+- Tempo estimado: 7h
+- Status: Finalizado
+-------------------------
+---------TICKET-----------
+- ID: Tick-5
+- Usuario solicitante: 246.135.790-13
+- Tipo: Software
+- Nome do software: SISTEMA DE PONTO
+- Categoria: BUG
+- Nível do impacto: 5
+- Motivo: SISTEMA DE PONTO MOSTRANDO A HORA ERRADA
+- Tempo estimado: 8h
+- Status: Finalizado
+-------------------------
+---------------------------

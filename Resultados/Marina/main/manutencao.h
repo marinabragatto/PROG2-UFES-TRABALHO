@@ -4,6 +4,7 @@
 #define MAX_TAM_NOME_MANUTENCAO 100
 #define MAX_TAM_LOC 100
 #define MAX_TAM_ESTADO 40
+#define MAX_TAM_PED 40
 
 #define TEMPO_ESTIMADO_RUIM 3
 #define TEMPO_ESTIMADO_REGULAR 2
@@ -31,7 +32,7 @@ typedef struct Manutencao Manutencao;
  * @param motivo Motivo da abertura do ticket
  * @return  Uma estrutura Manutencao inicializada.
  */
-Manutencao * criaManutencao(char *nome, char * estado, char * localizacao);
+Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char * setor);
 //PORTA DE ENTRADA (nome do item) 
 //RUIM (estado de conservação) 
 //SALA 22 BLOCO B (localização) 
@@ -40,14 +41,14 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao);
  * @brief Lê da entrada padrão um  ticket do TIPO Manutencao
  * @return  Um chamado do Tipo Manutencao
  */
-Manutencao * lerManutencao();
+Manutencao * lerManutencao(char * setor);
 
 /**
  * @brief  Calcula o tempo estimado para resolver um ticket do tipo Manutencao.
  * Tempo estimado depende da categoria e impacto
  * @param s  Ticket do tipo Manutencao
  */
-void setTempoEstimadoManutencao(Manutencao *m, char * setor);
+void setTempoEstimadoManutencao(Manutencao *m);
 
 /**
  * @brief  Retorna o tempo estimado para resolver um ticket do tipo Manutencao.

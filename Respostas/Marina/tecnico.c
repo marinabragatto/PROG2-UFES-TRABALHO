@@ -106,6 +106,16 @@ void notificaTecnico(void *dado){
     - Salario: 2000.00
     - Disponibilidade: 7h
     - Tempo Trabalhado: 0h
+
+    - Nome: HEIMERDINGER GARCIA
+- CPF: 456.987.123-96
+- Data de Nascimento: 20/10/1945
+- Telefone: (90)99876-1234
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 3500.00
+- Disponibilidade: 9h
+- Tempo Trabalhado: 11h
 */
 }
 
@@ -142,4 +152,17 @@ int getIdadeTecnico(Tecnico * tecnico){
 
 int getTempoTrabalhadoTecnicos(Tecnico * tecnico){
     return tecnico->tempoTrabalhado;
+}
+
+char * getAreaAtuacaoTecnico(Tecnico * tecnico){
+    return tecnico->areaAtuacao;
+}
+
+void DiminuiDisponibilidadeTecnico(Tecnico * tec, int desconto){
+    tec->disponibilidadeTrab -= desconto;
+
+}
+
+void incrementaHorasTrabalhadasTecnico(Tecnico * tec, int desconto){
+    tec->tempoTrabalhado += desconto;
 }

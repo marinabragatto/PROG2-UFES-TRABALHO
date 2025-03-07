@@ -57,6 +57,7 @@ Ticket *criaTicket(char *cpfSol, void *dado, func_ptr_tempoEstimado getTempo, fu
     ticket->getTipo = getTipo;
     ticket->notifica = notifica;
     ticket->desaloca = desaloca;
+   // (getTempo(dado))
     
     return ticket;
 

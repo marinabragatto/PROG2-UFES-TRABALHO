@@ -35,31 +35,92 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
         imprimeRelatorio(listaTec, listaUsuarios, fila);
     }
     if(strcmp(operacao, "DISTRIBUI")==0){
+        Ticket * ticketAtual;
+        imprimeFilaTickets(fila);
+        int j = 0;
+        int k = 0;
+        while(j < getQtdTicketsNaFila(fila)){
+
+            ticketAtual = getTicketNaFila(fila, j);
+           
+            if(getStatusTicket(ticketAtual) != 'A'){
+                
+                j++;
+                continue;
+            }
+
+            char tipoTic = getTipoTicket(ticketAtual);
+            int podeAtender = 0;
+            
+            while(k < VectorSize(listaTec)){
+
+                Tecnico * tecAnalise;
+                tecAnalise = VectorGet(listaTec, k);
+                
+                if (tipoTic == 'S' && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") == 0) {
+                    podeAtender = 1;
+                } else if ((tipoTic == 'O' || tipoTic == 'M') && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") != 0) {
+                    podeAtender = 1;
+                }
+
+                if (podeAtender && getDisponibilidadeTrabalhoTecnico(tecAnalise) >= getTempoEstimadoTicket(ticketAtual)) {
+
+                    int desconto = getTempoEstimadoTicket(ticketAtual);
+                    DiminuiDisponibilidadeTecnico(tecAnalise, desconto);
+                    incrementaHorasTrabalhadasTecnico(tecAnalise, desconto);
+                    finalizaTicket(ticketAtual);
+                    printf("esse cara pegou esse ticket\n\n\n!!!");
+                        notificaTicket(ticketAtual);
+                        notificaTecnico(tecAnalise);    
+                    printf("FIM!!!\n\n\n");            
+                    k++;
+                    break; // Sai do loop porque o ticket foi atribuído
+                }
+                else{
+                    k++;
+                }
+
+            }
+
+            if(getStatusTicket(ticketAtual) == 'A' && k >= VectorSize(listaTec) ){
+                //Chegou ao fim da lista e o ticket continuou em aberto
+                k = 0;
+                j++;
+            }
+            else if(getStatusTicket(ticketAtual) == 'F' && k < VectorSize(listaTec)){
+                //Conseguiu achar o tecnico e o ticket foi finalizado
+                j++;
+            }
+            else if(getStatusTicket(ticketAtual) == 'F' && k >= VectorSize(listaTec)){
+                //Conseguiu achar o tecnico e o ticket foi finalizado, mas esse era o ultimo tecnico da lista, entao iniciamos de novo o loop
+                j++;
+                k = 0;
+            }
+            else if(getStatusTicket(ticketAtual) == 'A' && k < VectorSize(listaTec)){
+                //isso nao tem como ocorrer pois o loop de cima so eh finalizado quando k >= VectorSize(listaTec) ou quando um ticket é finalizado
+                
+            }
+            // se sair desse segundo while ou significa que conseguiu achar um tecnico para o ticket ou que chegou ao fim dos tecnicos e nenhum resolveu o problema
+            
+
+        }
         
     }
     if(strcmp(operacao, "NOTIFICA")==0){
+        imprimeFilaTickets(fila);
         
     }
     if(strcmp(operacao, "RANKING TECNICOS")==0){
+        printf("----- RANKING DE TECNICOS -----\n");
+        imprimeBancoTecnicos(listaTec);
         
     }
 
-    /*
-    E
-DISTRIBUI
-E
-NOTIFICA
-E
-RANKING TECNICOS
-E
-RELATORIO
-    
-    */
     
 
 }
 
-Fila *  operacaoA(Fila  * fila){
+Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
     char cpf[MAX_TAM_CPF_USER];
     char tipo[TAM_MAX_OPERACAO];
 
@@ -68,20 +129,49 @@ Fila *  operacaoA(Fila  * fila){
     scanf("%[^\n]", tipo);
     scanf("%*[\n]");
 
+
+    // analisar se o cpf existe
+
+    int k = 0;
+    Usuario * pedinte = NULL;
+    char * setor = NULL;
+
+    
+
+    for(k = 0; k < VectorSize(listaUsuarios); k++){
+        if(comparaUsuariooECpf(VectorGet(listaUsuarios, k), cpf)){
+            pedinte = VectorGet(listaUsuarios, k);
+            setor = getSetorUsuario(pedinte);
+            break;
+        }
+    }
+    if(pedinte == NULL){
+        return fila;
+    }
+
+    
+
+
     if(strcmp(tipo, "OUTROS")==0){
         Outros * out;
         out = lerOutros();
+        setTempoEstimadoOutros(out);
+        //printf("\noutros!%d!\n", getTempoEstimadoOutros(out));
         insereTicketFila(fila, cpf, out, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
     }
     else if(strcmp(tipo, "SOFTWARE")==0){
         Software * soft;
         soft = lerSoftware();
+        setTempoEstimadoSoftware(soft);
+        //printf("\nsoftware!%d!\n", getTempoEstimadoSoftware(soft));
         insereTicketFila(fila, cpf, soft, getTempoEstimadoSoftware, getTipoSoftware, notificaSoftware, desalocaSoftware);
                 
     }
     else if(strcmp(tipo, "MANUTENCAO")==0){
         Manutencao * manutencao;
-        manutencao = lerManutencao();
+        manutencao = lerManutencao(setor);
+        setTempoEstimadoManutencao(manutencao);
+        //printf("\nmanutencao!%d!\n", getTempoEstimadoManutencao(manutencao));
         insereTicketFila(fila, cpf, manutencao, getTempoEstimadoManutencao, getTipoManutencao, notificaManutencao, desalocaManutencao);
                 
     }

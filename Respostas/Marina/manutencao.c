@@ -8,9 +8,10 @@ struct Manutencao{
     char estado[MAX_TAM_ESTADO]; 
     char localizacao[MAX_TAM_LOC];
     int tempoEstimado;
+    char setordoPedinte[MAX_TAM_PED];
 };
 
-Manutencao * criaManutencao(char *nome, char * estado, char * localizacao){
+Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char * setor){
     Manutencao * manutencao;
     
     manutencao =  (Manutencao*)malloc(sizeof(Manutencao));
@@ -18,6 +19,7 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao){
     strcpy(manutencao->localizacao, localizacao);
     strcpy(manutencao->estado, estado);
     strcpy(manutencao->nome, nome);
+    strcpy(manutencao->setordoPedinte, setor);
     manutencao->tempoEstimado = 0;
     
     return manutencao;
@@ -33,7 +35,7 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao){
  * @brief Lê da entrada padrão um  ticket do TIPO Manutencao
  * @return  Um chamado do Tipo Manutencao
  */
-Manutencao *lerManutencao(){
+Manutencao *lerManutencao(char * setor){
     char nome[MAX_TAM_NOME_MANUTENCAO];
     char estado[MAX_TAM_ESTADO];
     char loc[MAX_TAM_LOC];
@@ -47,7 +49,7 @@ Manutencao *lerManutencao(){
     scanf("%*[\n]");
     
     Manutencao * manutencao;
-    manutencao = criaManutencao(nome,estado,loc);
+    manutencao = criaManutencao(nome,estado,loc, setor);
 
     return manutencao;
 }
@@ -58,9 +60,10 @@ Manutencao *lerManutencao(){
  * @param dado  Ticket do tipo Manutencao
  * @return  Tempo estimado para resolver um ticket do tipo Manutencao
  */
-void setTempoEstimadoManutencaocriaManutencao(Manutencao *m, char * setor){
+void setTempoEstimadoManutencao(Manutencao *m){
     int mult = 0, horas = 0;
     if(strcmp(m->estado, "RUIM") == 0){
+       // printf("ruim!");
         horas = TEMPO_ESTIMADO_RUIM;
     }
     if(strcmp(m->estado, "REGULAR") == 0){
@@ -72,20 +75,20 @@ void setTempoEstimadoManutencaocriaManutencao(Manutencao *m, char * setor){
     
 
 
-
-    if(strcmp(setor, "RH") == 0){
+   // printf("%s", m->setordoPedinte);
+    if(strcmp(m->setordoPedinte, "RH") == 0){
         mult = FATOR_MULT_RH;
     }
-    if(strcmp(setor, "FINANCEIRO") == 0){
+    if(strcmp(m->setordoPedinte, "FINANCEIRO") == 0){
         mult = FATOR_MULT_FINANC;
     }
-    if(strcmp(setor, "P&D") == 0){
+    if(strcmp(m->setordoPedinte, "P&D") == 0){
         mult = FATOR_MULT_PED;
     }
-    if(strcmp(setor, "VENDAS") == 0){
+    if(strcmp(m->setordoPedinte, "VENDAS") == 0){
         mult = FATOR_MULT_VENDAS;
     }
-    if(strcmp(setor, "MARKETING") == 0){
+    if(strcmp(m->setordoPedinte, "MARKETING") == 0){
         mult = FATOR_MULT_MARK;
     }
     

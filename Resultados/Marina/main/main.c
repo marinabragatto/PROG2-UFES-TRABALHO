@@ -39,7 +39,7 @@ int main(){
             operacaoE(listaTec, listaUsuarios, fila);
         }
         if(op == 'A'){
-            fila = operacaoA(fila);
+            fila = operacaoA(fila, listaUsuarios);
         }
     }
 

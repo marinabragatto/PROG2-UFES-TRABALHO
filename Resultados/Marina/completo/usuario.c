@@ -119,3 +119,7 @@ int getIdadeUsuarios(Usuario * user){
     liberaData(dataReferencia);
     return ano;
 }
+
+char * getSetorUsuario(Usuario * user){
+    return user->setor;
+}

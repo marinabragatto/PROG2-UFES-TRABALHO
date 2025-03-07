@@ -23,7 +23,7 @@ Vector * operacaoU(Vector * usuarios);
 
 void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila);
 
-Fila * operacaoA(Fila  * fila);
+Fila * operacaoA(Fila  * fila, Vector * listaUsuarios);
 
 
 
