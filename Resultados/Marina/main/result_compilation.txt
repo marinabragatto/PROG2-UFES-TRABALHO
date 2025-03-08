@@ -13,3 +13,14 @@ mainsuport.c: In function ‘imprimeFilaTickets’:
 mainsuport.c:83:9: warning: unused variable ‘i’ [-Wunused-variable]
    83 |     int i = 0;
       |         ^
+mainsuport.c: In function ‘imprimeRankingTecnicos’:
+mainsuport.c:101:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
+  101 |     ordenaVetor(ordenado, comparaDoisTecnicosRanking1);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           int (*)(void *, void *)
+In file included from mainsuport.h:14,
+                 from mainsuport.c:1:
+vetor.h:50:37: note: expected ‘int (*)(const void *, const void *)’ but argument is of type ‘int (*)(void *, void *)’
+   50 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

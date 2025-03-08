@@ -166,3 +166,42 @@ void DiminuiDisponibilidadeTecnico(Tecnico * tec, int desconto){
 void incrementaHorasTrabalhadasTecnico(Tecnico * tec, int desconto){
     tec->tempoTrabalhado += desconto;
 }
+
+int comparaDoisTecnicosRanking1(void * a, void * b){
+    
+        // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
+        Tecnico *tec1 = *(Tecnico **)a;
+        Tecnico *tec2 = *(Tecnico **)b;
+    
+        if (tec1->tempoTrabalhado > tec2->tempoTrabalhado) {
+            return -1;
+        } else if (tec1->tempoTrabalhado < tec2->tempoTrabalhado) {
+            return 1;
+        } else {
+            // Critério de desempate: ordem alfabética do nome
+            return strcmp(tec1->nome, tec2->nome);
+        }
+    
+    
+    /*
+    if(tec1->tempoTrabalhado > tec2->tempoTrabalhado){
+        return -1;
+    }
+    else if(tec1->tempoTrabalhado < tec2->tempoTrabalhado){
+        return 1;
+    }
+    else if(tec1->tempoTrabalhado == tec2->tempoTrabalhado){
+        if(strcmp(tec1->nome, tec2->nome) < 0){
+            return -1;
+        }
+        else if(strcmp(tec1->nome, tec2->nome) > 0){
+            return 1;
+        }
+        else if(strcmp(tec1->nome, tec2->nome) == 0){
+            return 0;
+        }
+    }
+
+    return 0;*/
+
+}

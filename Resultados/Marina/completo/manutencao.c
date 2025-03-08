@@ -19,7 +19,10 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char 
     strcpy(manutencao->localizacao, localizacao);
     strcpy(manutencao->estado, estado);
     strcpy(manutencao->nome, nome);
-    strcpy(manutencao->setordoPedinte, setor);
+    if(setor != NULL){
+       strcpy(manutencao->setordoPedinte, setor); 
+    }
+    
     manutencao->tempoEstimado = 0;
     
     return manutencao;

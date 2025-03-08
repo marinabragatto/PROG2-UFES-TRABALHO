@@ -1,15 +1,50 @@
-==136066== Memcheck, a memory error detector
-==136066== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==136066== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==136066== Command: Resultados/Marina/main/prog Resultados/Marina/main/Casos/3
-==136066== Parent PID: 136065
-==136066== 
-==136066== 
-==136066== HEAP SUMMARY:
-==136066==     in use at exit: 0 bytes in 0 blocks
-==136066==   total heap usage: 40 allocs, 40 frees, 5,004 bytes allocated
-==136066== 
-==136066== All heap blocks were freed -- no leaks are possible
-==136066== 
-==136066== For lists of detected and suppressed errors, rerun with: -s
-==136066== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==354812== Memcheck, a memory error detector
+==354812== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==354812== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==354812== Command: Resultados/Marina/main/prog Resultados/Marina/main/Casos/3
+==354812== Parent PID: 354811
+==354812== 
+==354812== Conditional jump or move depends on uninitialised value(s)
+==354812==    at 0x10A3ED: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x10A509: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109D7E: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109EEA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812== 
+==354812== Use of uninitialised value of size 8
+==354812==    at 0x484EE64: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==354812==    by 0x10A408: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x10A509: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109D7E: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109EEA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812== 
+==354812== Conditional jump or move depends on uninitialised value(s)
+==354812==    at 0x484EEA5: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==354812==    by 0x10A408: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x10A509: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109D7E: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109EEA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812== 
+==354812== Conditional jump or move depends on uninitialised value(s)
+==354812==    at 0x484EEAA: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==354812==    by 0x10A408: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x10A509: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109D7E: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109EEA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812== 
+==354812== Conditional jump or move depends on uninitialised value(s)
+==354812==    at 0x484EF18: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==354812==    by 0x10A408: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x10A509: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109D7E: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812==    by 0x109EEA: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/main/prog)
+==354812== 
+==354812== 
+==354812== HEAP SUMMARY:
+==354812==     in use at exit: 0 bytes in 0 blocks
+==354812==   total heap usage: 43 allocs, 43 frees, 5,344 bytes allocated
+==354812== 
+==354812== All heap blocks were freed -- no leaks are possible
+==354812== 
+==354812== Use --track-origins=yes to see where uninitialised values come from
+==354812== For lists of detected and suppressed errors, rerun with: -s
+==354812== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

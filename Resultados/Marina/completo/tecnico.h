@@ -39,4 +39,7 @@ void DiminuiDisponibilidadeTecnico(Tecnico * tec, int desconto);
 void incrementaHorasTrabalhadasTecnico(Tecnico * tec, int desconto);
 
 
+int comparaDoisTecnicosRanking1(void * a, void * b);
+
+
 #endif

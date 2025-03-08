@@ -47,4 +47,8 @@ void VectorDestroy(Vector *v, void (*destroy)(data_type));
 
 void imprimeElementoVetorDeIdx(Vector * v, void (*imprime)(data_type), int idx);
 
+void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
+
+void destroiParcialmenteOrdenado(Vector * v);
+
 #endif

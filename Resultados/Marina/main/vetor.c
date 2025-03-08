@@ -93,3 +93,16 @@ void VectorDestroy(Vector *v, void (*destroy)(data_type)){
 void imprimeElementoVetorDeIdx( Vector * v, void (*imprime)(data_type), int idx){
     imprime(v->data[idx]);
 }
+
+void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *)){
+    qsort(v->data, v->tamAtual, sizeof(data_type) , compar);
+}
+
+void destroiParcialmenteOrdenado(Vector * v){
+    if(v){
+        if(v->data){
+            free(v->data);
+        }
+        free(v);
+    }
+}
