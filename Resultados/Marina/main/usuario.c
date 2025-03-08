@@ -123,3 +123,26 @@ int getIdadeUsuarios(Usuario * user){
 char * getSetorUsuario(Usuario * user){
     return user->setor;
 }
+
+void incrementaQtdTicketsSolicitados(Usuario * user){
+    user->qtdTicketsSolicitados++;
+}
+
+char * getCpfUsuario(Usuario * user){
+    return user->cpf;
+}
+
+int comparaDoisUsuariosRanking1(void * a, void * b){
+            // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
+            Usuario *us1 = *(Usuario **)a;
+            Usuario *us2 = *(Usuario **)b;
+        
+            if (us1->qtdTicketsSolicitados > us2->qtdTicketsSolicitados) {
+                return -1;
+            } else if  (us1->qtdTicketsSolicitados < us2->qtdTicketsSolicitados){
+                return 1;
+            } else {
+                // Critério de desempate: ordem alfabética do nome
+                return strcmp(us1->nome, us2->nome);
+            }
+}

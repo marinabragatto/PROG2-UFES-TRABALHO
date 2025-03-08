@@ -79,7 +79,7 @@ void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
 }
 
 void imprimeFilaTickets(Fila * fila){
-    printf("\n----- FILA DE TICKETS -----\n");
+    printf("----- FILA DE TICKETS -----\n");
     int i = 0;
     notificaFila(fila);
     printf("---------------------------\n\n");
@@ -93,10 +93,6 @@ void imprimeRankingTecnicos(Vector * listaTec){
     for(int i = 0; i < VectorSize(listaTec); i++){
         VectorPushBack(ordenado, VectorGet(listaTec,i));
     }
-  //  printf("!!ordenado!!\n\n\n");
-   // imprimeBancoTecnicos(ordenado);
-  //  printf("!!lista!!\n\n\n");
-    //imprimeBancoTecnicos(listaTec);
 
     ordenaVetor(ordenado, comparaDoisTecnicosRanking1);
     printf("----- RANKING DE TECNICOS -----\n");
@@ -109,3 +105,22 @@ void imprimeRankingTecnicos(Vector * listaTec){
 
 }
 
+void imprimeRankingUsuarios(Vector * listaUsuarios){
+    Vector * ordenado;
+
+    ordenado = VectorConstruct();
+    
+    for(int i = 0; i < VectorSize(listaUsuarios); i++){
+        VectorPushBack(ordenado, VectorGet(listaUsuarios,i));
+    }
+
+    ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
+    printf("----- RANKING DE USUARIOS -----\n");
+    for(int i = 0; i < VectorSize(ordenado); i++){
+        notificaUsuario(VectorGet(ordenado, i));
+    }
+    destroiParcialmenteOrdenado(ordenado);
+    printf("-------------------------------\n\n");
+   // VectorDestroy(ordenado, desalocaTecnico);
+
+}

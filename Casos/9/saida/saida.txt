@@ -1,0 +1,419 @@
+----- FILA DE TICKETS -----
+---------TICKET-----------
+- ID: Tick-1
+- Usuario solicitante: 132.465.798-02
+- Tipo: Manutencao
+- Nome do item: PORTA DE ENTRADA
+- Estado de conservacao: RUIM
+- Local: SALA 22 BLOCO B
+- Tempo estimado: 6h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 246.135.790-13
+- Tipo: Software
+- Nome do software: EXCEL
+- Categoria: BUG
+- Nível do impacto: 3
+- Motivo: NAO CONSIGO ORDENAR COLUNA DE DADOS
+- Tempo estimado: 6h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-3
+- Usuario solicitante: 357.246.801-24
+- Tipo: Outros
+- Descricao: LAMPADA PISCANDO CONSTANTEMENTE NO CORREDOR
+- Local: CORREDOR PRINCIPAL
+- Nivel de Dificuldade: 3
+- Tempo Estimado: 3h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-4
+- Usuario solicitante: 468.357.912-35
+- Tipo: Manutencao
+- Nome do item: AR CONDICIONADO
+- Estado de conservacao: RUIM
+- Local: SALA 15 BLOCO A
+- Tempo estimado: 3h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-5
+- Usuario solicitante: 579.468.023-46
+- Tipo: Software
+- Nome do software: OUTLOOK
+- Categoria: BUG
+- Nível do impacto: 4
+- Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
+- Tempo estimado: 7h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-6
+- Usuario solicitante: 680.579.134-57
+- Tipo: Outros
+- Descricao: CACHORRO ABANDONADO PERTO DA PORTARIA
+- Local: PORTARIA PRINCIPAL
+- Nivel de Dificuldade: 1
+- Tempo Estimado: 1h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-7
+- Usuario solicitante: 791.680.245-68
+- Tipo: Software
+- Nome do software: SISTEMA DE PONTO
+- Categoria: BUG
+- Nível do impacto: 5
+- Motivo: SISTEMA DE PONTO MOSTRANDO A HORA ERRADA
+- Tempo estimado: 8h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-8
+- Usuario solicitante: 802.791.356-79
+- Tipo: Manutencao
+- Nome do item: VENTILADOR
+- Estado de conservacao: REGULAR
+- Local: SALA 10 BLOCO C
+- Tempo estimado: 2h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-9
+- Usuario solicitante: 111.222.333-44
+- Tipo: Software
+- Nome do software: WORD
+- Categoria: DUVIDA
+- Nível do impacto: 2
+- Motivo: NAO CONSIGO INSERIR NUMERACAO DE PAGINAS
+- Tempo estimado: 3h
+- Status: Finalizado
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-10
+- Usuario solicitante: 222.333.444-55
+- Tipo: Manutencao
+- Nome do item: JANELA QUEBRADA
+- Estado de conservacao: RUIM
+- Local: SALA 5 BLOCO D
+- Tempo estimado: 9h
+- Status: Finalizado
+-------------------------
+
+---------------------------
+
+----- BANCO DE USUARIOS -----
+--------------------
+- Nome: SYLAS REIS
+- CPF: 132.465.798-02
+- Data de Nascimento: 10/10/1984
+- Telefone: (11)99765-3210
+- Genero: OUTROS
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: MISS FORTUNE TEIXEIRA
+- CPF: 246.135.790-13
+- Data de Nascimento: 12/2/1989
+- Telefone: (21)98741-3652
+- Genero: FEMININO
+- Setor: FINANCEIRO
+- Tickets solicitados: 1
+--------------------
+- Nome: TALON FIGUEIREDO
+- CPF: 357.246.801-24
+- Data de Nascimento: 20/7/1992
+- Telefone: (31)95698-7432
+- Genero: MASCULINO
+- Setor: P&D
+- Tickets solicitados: 1
+--------------------
+- Nome: RIVEN SOUZA
+- CPF: 468.357.912-35
+- Data de Nascimento: 18/11/1981
+- Telefone: (41)97412-3589
+- Genero: FEMININO
+- Setor: MARKETING
+- Tickets solicitados: 1
+--------------------
+- Nome: EKKO NUNES
+- CPF: 579.468.023-46
+- Data de Nascimento: 6/5/1996
+- Telefone: (51)98742-1365
+- Genero: MASCULINO
+- Setor: VENDAS
+- Tickets solicitados: 1
+--------------------
+- Nome: LEONA PEREIRA
+- CPF: 680.579.134-57
+- Data de Nascimento: 1/8/1994
+- Telefone: (61)95487-6321
+- Genero: OUTROS
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: MORDEKAISER MARTINS
+- CPF: 791.680.245-68
+- Data de Nascimento: 23/9/1986
+- Telefone: (71)98752-4569
+- Genero: MASCULINO
+- Setor: P&D
+- Tickets solicitados: 1
+--------------------
+- Nome: FIORA GONCALVES
+- CPF: 802.791.356-79
+- Data de Nascimento: 29/3/1979
+- Telefone: (81)97485-6321
+- Genero: FEMININO
+- Setor: MARKETING
+- Tickets solicitados: 1
+--------------------
+- Nome: KATARINA LIMA
+- CPF: 111.222.333-44
+- Data de Nascimento: 5/12/1990
+- Telefone: (31)94567-8901
+- Genero: FEMININO
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: JINX OLIVEIRA
+- CPF: 222.333.444-55
+- Data de Nascimento: 19/4/1988
+- Telefone: (41)95678-9012
+- Genero: FEMININO
+- Setor: FINANCEIRO
+- Tickets solicitados: 1
+----------------------------
+
+----- BANCO DE TECNICOS -----
+--------------------
+- Nome: JAYCE BARBOSA
+- CPF: 854.632.894-20
+- Data de Nascimento: 22/2/1990
+- Telefone: (37)9938-3382
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 2000.00
+- Disponibilidade: 9h
+- Tempo Trabalhado: 11h
+--------------------
+- Nome: AHRI COSTA
+- CPF: 234.567.890-12
+- Data de Nascimento: 22/7/1990
+- Telefone: (21)91234-5678
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 4800.00
+- Disponibilidade: 25h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: YASUO FERREIRA
+- CPF: 345.678.901-23
+- Data de Nascimento: 10/5/1982
+- Telefone: (31)92345-6789
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 5200.00
+- Disponibilidade: 24h
+- Tempo Trabalhado: 16h
+--------------------
+- Nome: GAREN SANTOS
+- CPF: 901.234.567-89
+- Data de Nascimento: 14/8/1983
+- Telefone: (91)98901-2345
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4300.00
+- Disponibilidade: 22h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: LUX SILVA
+- CPF: 123.456.789-01
+- Data de Nascimento: 15/9/1985
+- Telefone: (11)98765-4321
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 3000.00
+- Disponibilidade: 2h
+- Tempo Trabalhado: 13h
+--------------------
+- Nome: ZED ALMEIDA
+- CPF: 987.654.321-09
+- Data de Nascimento: 30/11/1995
+- Telefone: (21)91234-8765
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4500.00
+- Disponibilidade: 2h
+- Tempo Trabalhado: 8h
+----------------------------
+
+----- RANKING DE TECNICOS -----
+--------------------
+- Nome: YASUO FERREIRA
+- CPF: 345.678.901-23
+- Data de Nascimento: 10/5/1982
+- Telefone: (31)92345-6789
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 5200.00
+- Disponibilidade: 24h
+- Tempo Trabalhado: 16h
+--------------------
+- Nome: LUX SILVA
+- CPF: 123.456.789-01
+- Data de Nascimento: 15/9/1985
+- Telefone: (11)98765-4321
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 3000.00
+- Disponibilidade: 2h
+- Tempo Trabalhado: 13h
+--------------------
+- Nome: JAYCE BARBOSA
+- CPF: 854.632.894-20
+- Data de Nascimento: 22/2/1990
+- Telefone: (37)9938-3382
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 2000.00
+- Disponibilidade: 9h
+- Tempo Trabalhado: 11h
+--------------------
+- Nome: ZED ALMEIDA
+- CPF: 987.654.321-09
+- Data de Nascimento: 30/11/1995
+- Telefone: (21)91234-8765
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4500.00
+- Disponibilidade: 2h
+- Tempo Trabalhado: 8h
+--------------------
+- Nome: AHRI COSTA
+- CPF: 234.567.890-12
+- Data de Nascimento: 22/7/1990
+- Telefone: (21)91234-5678
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 4800.00
+- Disponibilidade: 25h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: GAREN SANTOS
+- CPF: 901.234.567-89
+- Data de Nascimento: 14/8/1983
+- Telefone: (91)98901-2345
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4300.00
+- Disponibilidade: 22h
+- Tempo Trabalhado: 0h
+-------------------------------
+
+----- RANKING DE USUARIOS -----
+--------------------
+- Nome: EKKO NUNES
+- CPF: 579.468.023-46
+- Data de Nascimento: 6/5/1996
+- Telefone: (51)98742-1365
+- Genero: MASCULINO
+- Setor: VENDAS
+- Tickets solicitados: 1
+--------------------
+- Nome: FIORA GONCALVES
+- CPF: 802.791.356-79
+- Data de Nascimento: 29/3/1979
+- Telefone: (81)97485-6321
+- Genero: FEMININO
+- Setor: MARKETING
+- Tickets solicitados: 1
+--------------------
+- Nome: JINX OLIVEIRA
+- CPF: 222.333.444-55
+- Data de Nascimento: 19/4/1988
+- Telefone: (41)95678-9012
+- Genero: FEMININO
+- Setor: FINANCEIRO
+- Tickets solicitados: 1
+--------------------
+- Nome: KATARINA LIMA
+- CPF: 111.222.333-44
+- Data de Nascimento: 5/12/1990
+- Telefone: (31)94567-8901
+- Genero: FEMININO
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: LEONA PEREIRA
+- CPF: 680.579.134-57
+- Data de Nascimento: 1/8/1994
+- Telefone: (61)95487-6321
+- Genero: OUTROS
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: MISS FORTUNE TEIXEIRA
+- CPF: 246.135.790-13
+- Data de Nascimento: 12/2/1989
+- Telefone: (21)98741-3652
+- Genero: FEMININO
+- Setor: FINANCEIRO
+- Tickets solicitados: 1
+--------------------
+- Nome: MORDEKAISER MARTINS
+- CPF: 791.680.245-68
+- Data de Nascimento: 23/9/1986
+- Telefone: (71)98752-4569
+- Genero: MASCULINO
+- Setor: P&D
+- Tickets solicitados: 1
+--------------------
+- Nome: RIVEN SOUZA
+- CPF: 468.357.912-35
+- Data de Nascimento: 18/11/1981
+- Telefone: (41)97412-3589
+- Genero: FEMININO
+- Setor: MARKETING
+- Tickets solicitados: 1
+--------------------
+- Nome: SYLAS REIS
+- CPF: 132.465.798-02
+- Data de Nascimento: 10/10/1984
+- Telefone: (11)99765-3210
+- Genero: OUTROS
+- Setor: RH
+- Tickets solicitados: 1
+--------------------
+- Nome: TALON FIGUEIREDO
+- CPF: 357.246.801-24
+- Data de Nascimento: 20/7/1992
+- Telefone: (31)95698-7432
+- Genero: MASCULINO
+- Setor: P&D
+- Tickets solicitados: 1
+-------------------------------
+
+----- RELATORIO GERAL -----
+- Qtd tickets: 10
+- Qtd tickets (A): 0
+- Qtd tickets (F): 10
+- Qtd usuarios: 10
+- Md idade usuarios: 36
+- Qtd tecnicos: 6
+- Md idade tecnicos: 36
+- Md trabalho tecnicos: 8
+---------------------------

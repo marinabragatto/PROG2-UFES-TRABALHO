@@ -1,50 +1,15 @@
-==356019== Memcheck, a memory error detector
-==356019== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==356019== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==356019== Command: Resultados/Marina/completo/prog Resultados/Marina/completo/Casos/3
-==356019== Parent PID: 356018
-==356019== 
-==356019== Conditional jump or move depends on uninitialised value(s)
-==356019==    at 0x10A449: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x10A565: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109DDA: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109F46: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019== 
-==356019== Use of uninitialised value of size 8
-==356019==    at 0x484EE64: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356019==    by 0x10A464: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x10A565: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109DDA: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109F46: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019== 
-==356019== Conditional jump or move depends on uninitialised value(s)
-==356019==    at 0x484EEA5: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356019==    by 0x10A464: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x10A565: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109DDA: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109F46: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019== 
-==356019== Conditional jump or move depends on uninitialised value(s)
-==356019==    at 0x484EEAA: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356019==    by 0x10A464: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x10A565: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109DDA: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109F46: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019== 
-==356019== Conditional jump or move depends on uninitialised value(s)
-==356019==    at 0x484EF18: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356019==    by 0x10A464: criaManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x10A565: lerManutencao (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109DDA: operacaoA (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019==    by 0x109F46: main (in /mnt/c/Users/marin/OneDrive/Documentos/prog2-ufes/Trabalho-PROG2/trabalho-ufes2/Resultados/Marina/completo/prog)
-==356019== 
-==356019== 
-==356019== HEAP SUMMARY:
-==356019==     in use at exit: 0 bytes in 0 blocks
-==356019==   total heap usage: 40 allocs, 40 frees, 5,368 bytes allocated
-==356019== 
-==356019== All heap blocks were freed -- no leaks are possible
-==356019== 
-==356019== Use --track-origins=yes to see where uninitialised values come from
-==356019== For lists of detected and suppressed errors, rerun with: -s
-==356019== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==483913== Memcheck, a memory error detector
+==483913== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==483913== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==483913== Command: Resultados/Marina/completo/prog Resultados/Marina/completo/Casos/3
+==483913== Parent PID: 483912
+==483913== 
+==483913== 
+==483913== HEAP SUMMARY:
+==483913==     in use at exit: 0 bytes in 0 blocks
+==483913==   total heap usage: 40 allocs, 40 frees, 5,368 bytes allocated
+==483913== 
+==483913== All heap blocks were freed -- no leaks are possible
+==483913== 
+==483913== For lists of detected and suppressed errors, rerun with: -s
+==483913== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

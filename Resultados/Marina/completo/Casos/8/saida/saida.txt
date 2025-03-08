@@ -27,8 +27,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 1h
-- Tempo Trabalhado: 39h
+- Disponibilidade: 33h
+- Tempo Trabalhado: 7h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -40,7 +40,6 @@
 - Disponibilidade: 14h
 - Tempo Trabalhado: 8h
 ----------------------------
-
 ----- FILA DE TICKETS -----
 ---------TICKET-----------
 - ID: Tick-1
@@ -92,18 +91,18 @@
 - Local: PORTARIA PRINCIPAL
 - Nivel de Dificuldade: 32
 - Tempo Estimado: 32h
-- Status: Finalizado
+- Status: Aberto
 -------------------------
 ---------------------------
 
 ----- RELATORIO GERAL -----
 - Qtd tickets: 5
-- Qtd tickets (A): 0
-- Qtd tickets (F): 5
+- Qtd tickets (A): 1
+- Qtd tickets (F): 4
 - Qtd usuarios: 8
 - Md idade usuarios: 36
 - Qtd tecnicos: 4
 - Md idade tecnicos: 39
-- Md trabalho tecnicos: 13
+- Md trabalho tecnicos: 5
 ---------------------------
 

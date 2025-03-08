@@ -28,6 +28,6 @@ void imprimeBancoTecnicos(Vector * listaTec);
 void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Fila * fila);
 void imprimeFilaTickets(Fila * fila);
 void imprimeRankingTecnicos(Vector * listaTec);
-
+void imprimeRankingUsuarios(Vector * listaUsuarios);
 
 #endif

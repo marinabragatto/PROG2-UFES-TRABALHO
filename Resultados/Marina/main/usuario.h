@@ -28,5 +28,10 @@ int getIdadeUsuarios(Usuario * user);
 
 char * getSetorUsuario(Usuario * user);
 
+void incrementaQtdTicketsSolicitados(Usuario * user);
+
+char * getCpfUsuario(Usuario * user);
+
+int comparaDoisUsuariosRanking1(void * a, void * b);
 
 #endif

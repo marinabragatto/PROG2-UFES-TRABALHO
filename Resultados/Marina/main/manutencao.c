@@ -19,7 +19,7 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char 
     strcpy(manutencao->localizacao, localizacao);
     strcpy(manutencao->estado, estado);
     strcpy(manutencao->nome, nome);
-    if(setor != NULL){
+    if(setor[0] != '\0'){
        strcpy(manutencao->setordoPedinte, setor); 
     }
     
@@ -143,3 +143,4 @@ void notificaManutencao(void *dado){
 int getTempoEstimadoManutencao(void *dado){
     return (((Manutencao*)dado)->tempoEstimado);
 }
+
