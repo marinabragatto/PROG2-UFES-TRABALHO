@@ -11,21 +11,23 @@
 #include "vetor.h"
 #include "mainsuport.h"
 #include "funcoesmenu.h"
+#include "database.h"
 
 
 
 int main(){
     char op = 'a';
-    Vector * listaTec;
-    Vector * listaUsuarios;
-    Fila * fila;
-    fila = criaFila();
-    listaTec = VectorConstruct();
-    listaUsuarios = VectorConstruct();
+
+    DataBase * dataBase = criaDataBase();
 
     while(1){
         scanf("%*[^A-Za-z0-9]");
         scanf("%c\n", &op);
+
+        Vector * listaTec = retornaListaTecnicos(dataBase); 
+        Vector * listaUsuarios = retornaListaUsuarios(dataBase);
+        Fila * fila = retornaFila(dataBase);
+
         if(op == 'F'){
             break;
         }
@@ -43,10 +45,7 @@ int main(){
         }
     }
 
-    VectorDestroy(listaTec, desalocaTecnico);
-    VectorDestroy(listaUsuarios, desalocaUsuario);
-    desalocaFila(fila);
-
+    destroiDataBase(dataBase);
     return  0;
 }
 

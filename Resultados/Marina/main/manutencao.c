@@ -15,6 +15,10 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char 
     Manutencao * manutencao;
     
     manutencao =  (Manutencao*)malloc(sizeof(Manutencao));
+    if(manutencao == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     
     strcpy(manutencao->localizacao, localizacao);
     strcpy(manutencao->estado, estado);
@@ -27,17 +31,7 @@ Manutencao * criaManutencao(char *nome, char * estado, char * localizacao, char 
     
     return manutencao;
 }
-//PORTA DE ENTRADA (nome do item) 
-//RUIM (estado de conservação) 
-//SALA 22 BLOCO B (localização) 
 
-
-
-
-/**
- * @brief Lê da entrada padrão um  ticket do TIPO Manutencao
- * @return  Um chamado do Tipo Manutencao
- */
 Manutencao *lerManutencao(char * setor){
     char nome[MAX_TAM_NOME_MANUTENCAO];
     char estado[MAX_TAM_ESTADO];
@@ -58,15 +52,9 @@ Manutencao *lerManutencao(char * setor){
 }
 
 
-/**
- * @brief  Retorna o tempo estimado para resolver um ticket do tipo Manutencao.
- * @param dado  Ticket do tipo Manutencao
- * @return  Tempo estimado para resolver um ticket do tipo Manutencao
- */
 void setTempoEstimadoManutencao(Manutencao *m){
     int mult = 0, horas = 0;
     if(strcmp(m->estado, "RUIM") == 0){
-       // printf("ruim!");
         horas = TEMPO_ESTIMADO_RUIM;
     }
     if(strcmp(m->estado, "REGULAR") == 0){
@@ -77,8 +65,6 @@ void setTempoEstimadoManutencao(Manutencao *m){
     }
     
 
-
-   // printf("%s", m->setordoPedinte);
     if(strcmp(m->setordoPedinte, "RH") == 0){
         mult = FATOR_MULT_RH;
     }
@@ -97,44 +83,22 @@ void setTempoEstimadoManutencao(Manutencao *m){
     
     m->tempoEstimado = mult*horas;
     
-    
-    /* ○ Cada estado atribui uma quantidade de tempo: RUIM é 3h, REGULAR é 
-2h e BOM é 1h 
-○ O setor do usuário impacta no cálculo. Cada setor tem um fator de 
-multiplicação. RH = 2, FINANCEIRO = 3, P&D = 1, VENDAS = 1, 
-MARKETING = 1 
-○ O cálculo é realizado multiplicando o tempo do estado pelo fator do 
-setor. Por exemplo, se o estado é RUIM e o setor é o RH, o tempo 
-estimado será atribuído como 3 * 2 = 6h */
+
 }
 
 char getTipoManutencao(){
     return 'M';
 }
 
-/**
- * @brief  Desaloca um ticket do tipo Manutencao da memória
- * @param s  Ticket do tipo Manutencao
- */
+
 void desalocaManutencao(void *m){
     if(m){
         free(m);
     }
-    // realizar uma tipagem?
+
 }
 
-/**
- * @brief  Imprime um ticket do tipo Manutencao
- * @param dado  Ticket do tipo Manutencao
- */
 void notificaManutencao(void *dado){
-//- Tipo: Manutencao
-//- Nome do item: PORTA DE ENTRADA
-//- Estado de conservacao: RUIM
-//- Local: SALA 22 CT-7
-//- Tempo estimado: 6h
-
-
 
     printf("- Tipo: Manutencao\n- Nome do item: %s\n- Estado de conservacao: %s\n- Local: %s\n- Tempo estimado: %dh\n", ((Manutencao*)dado)->nome, ((Manutencao*)dado)->estado, ((Manutencao*)dado)->localizacao, ((Manutencao*)dado)->tempoEstimado);
 

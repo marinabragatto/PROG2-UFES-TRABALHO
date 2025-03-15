@@ -34,4 +34,5 @@ char * getCpfUsuario(Usuario * user);
 
 int comparaDoisUsuariosRanking1(void * a, void * b);
 
+
 #endif

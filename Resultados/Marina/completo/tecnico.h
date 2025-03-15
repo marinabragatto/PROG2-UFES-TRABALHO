@@ -40,5 +40,7 @@ Tecnico * tecnicoRecebeTicket(Tecnico * tec, Ticket * ticket);
 
 int comparaDoisTecnicosRanking1(void * a, void * b);
 
+int tecnicoPodePegarTicket(Tecnico * tec, Ticket * ticket);
+
 
 #endif

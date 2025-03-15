@@ -1,33 +1,56 @@
 funcoesmenu.c: In function ‘operacaoE’:
-funcoesmenu.c:42:22: warning: unused variable ‘i’ [-Wunused-variable]
-   42 |     int tamanho = 0, i = 0;
+funcoesmenu.c:31:22: warning: unused variable ‘i’ [-Wunused-variable]
+   31 |     int tamanho = 0, i = 0;
       |                      ^
-funcoesmenu.c:42:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
-   42 |     int tamanho = 0, i = 0;
+funcoesmenu.c:31:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
+   31 |     int tamanho = 0, i = 0;
       |         ^~~~~~~
+mainsuport.c: In function ‘imprimeRelatorio’:
+mainsuport.c:28:21: warning: implicit declaration of function ‘calculaMediaIdadePorTipo’ [-Wimplicit-function-declaration]
+   28 |     mediaIdadeTec = calculaMediaIdadePorTipo(listaTec, TECNICO);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
+mainsuport.c:30:25: warning: implicit declaration of function ‘calculaMediaHorasTrabalhadasTecnicos’ [-Wimplicit-function-declaration]
+   30 |     mediaHorasTrabTec = calculaMediaHorasTrabalhadasTecnicos(listaTec);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 mainsuport.c: In function ‘imprimeFilaTickets’:
-mainsuport.c:83:9: warning: unused variable ‘i’ [-Wunused-variable]
-   83 |     int i = 0;
+mainsuport.c:41:9: warning: unused variable ‘i’ [-Wunused-variable]
+   41 |     int i = 0;
       |         ^
 mainsuport.c: In function ‘imprimeRankingTecnicos’:
-mainsuport.c:97:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
-   97 |     ordenaVetor(ordenado, comparaDoisTecnicosRanking1);
+mainsuport.c:55:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
+   55 |     ordenaVetor(ordenado, comparaDoisTecnicosRanking1);
       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                           |
       |                           int (*)(void *, void *)
 In file included from mainsuport.h:14,
                  from mainsuport.c:1:
-vetor.h:50:37: note: expected ‘int (*)(const void *, const void *)’ but argument is of type ‘int (*)(void *, void *)’
-   50 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
+vetor.h:22:37: note: expected ‘int (*)(const void *, const void *)’ but argument is of type ‘int (*)(void *, void *)’
+   22 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
       |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 mainsuport.c: In function ‘imprimeRankingUsuarios’:
-mainsuport.c:116:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
-  116 |     ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
+mainsuport.c:74:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |     ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                           |
       |                           int (*)(void *, void *)
 In file included from mainsuport.h:14,
                  from mainsuport.c:1:
-vetor.h:50:37: note: expected ‘int (*)(const void *, const void *)’ but argument is of type ‘int (*)(void *, void *)’
-   50 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
+vetor.h:22:37: note: expected ‘int (*)(const void *, const void *)’ but argument is of type ‘int (*)(void *, void *)’
+   22 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
       |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+vetor.c: In function ‘VectorConstruct’:
+vetor.c:18:9: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   18 |         printf("erro ao alocar\n");
+      |         ^~~~~~
+vetor.c:3:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    2 | #include <stdlib.h>
+  +++ |+#include <stdio.h>
+    3 | 
+vetor.c:18:9: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   18 |         printf("erro ao alocar\n");
+      |         ^~~~~~
+vetor.c:18:9: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+vetor.c:26:9: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   26 |         printf("erro ao alocar\n");
+      |         ^~~~~~
+vetor.c:26:9: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’

@@ -4,44 +4,43 @@
 
 #define TAM_MAX 5
 
-//typedef void *data_type; // void pointer
 struct Vector {
-    data_type * data;
+    data * data;
     int tamAtual;
     int tamMax;
 };
 
 
-
-/**
- * @brief Cria um vetor vazio
- * 
- * @return A estrutura Vector inicializada. Caso não seja possível alocar memória, o programa é encerrado.
-*/
 Vector *VectorConstruct(){
     Vector * vector;
     vector = (Vector*)malloc(sizeof(Vector));
+    if(vector == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     vector->tamAtual = 0;
 
     vector->tamMax = TAM_MAX;
-    vector->data = (data_type*)malloc(sizeof(data_type)*(TAM_MAX));
+    vector->data = (data*)malloc(sizeof(data)*(TAM_MAX));
+    if(vector->data == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
 
     return vector;
 }
 
-/**
- * @brief Adiciona um elemento no final do vetor
- * 
- * @param v Ponteiro para o vetor
- * @param val Valor a ser adicionado
-*/
-void VectorPushBack(Vector *v, data_type val){
+void VectorPushBack(Vector *v, data val){
     int tamAtual  = 0, tamMax = 0;
     tamAtual = VectorSize(v);
     tamMax = v->tamMax;
     
     if(tamAtual >= tamMax){
-        v->data = realloc (v->data, sizeof(data_type)*(tamAtual + tamMax));
+        v->data = realloc (v->data, sizeof(data)*(tamAtual + tamMax));
+        if(v->data == NULL){
+            printf("erro ao alocar\n");
+            exit(1);
+        }
         v->tamMax += TAM_MAX;
     }
 
@@ -50,34 +49,17 @@ void VectorPushBack(Vector *v, data_type val){
 
 }
 
-/**
- * @brief Retorna o i-ésimo elemento do vetor
- * 
- * @param v Ponteiro para o vetor
- * @param i Índice do elemento
- * @return data_type Elemento do vetor
-*/
-data_type VectorGet(Vector *v, int i){
+
+data VectorGet(Vector *v, int i){
     return v->data[i];
 }
 
-/**
- * @brief Retorna o tamanho do vetor
- * 
- * @param v Ponteiro para o vetor
- * @return int Tamanho do vetor
-*/
+
 int VectorSize(Vector *v){
     return v->tamAtual;
 }
 
-/**
- * @brief Libera a memória alocada para o vetor
- * 
- * @param v Ponteiro para o vetor
- * @param destroy Função que libera a memória alocada para cada elemento do vetor
-*/
-void VectorDestroy(Vector *v, void (*destroy)(data_type)){
+void VectorDestroy(Vector *v, void (*destroy)(data)){
     if(v){
         if(v->data){
             int i = 0;
@@ -90,12 +72,12 @@ void VectorDestroy(Vector *v, void (*destroy)(data_type)){
     }
 }
 
-void imprimeElementoVetorDeIdx( Vector * v, void (*imprime)(data_type), int idx){
+void imprimeElementoVetorDeIdx( Vector * v, void (*imprime)(data), int idx){
     imprime(v->data[idx]);
 }
 
 void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *)){
-    qsort(v->data, v->tamAtual, sizeof(data_type) , compar);
+    qsort(v->data, v->tamAtual, sizeof(data) , compar);
 }
 
 void destroiParcialmenteOrdenado(Vector * v){

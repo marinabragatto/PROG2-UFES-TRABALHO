@@ -15,8 +15,16 @@ Fila *criaFila(){
     Fila * fila;
 
     fila = (Fila*)malloc(sizeof(Fila));
+    if(fila == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
 
     fila->elementos = (Ticket**)malloc(sizeof(Ticket*)*MIN_QTD_ELEMT);
+    if(fila->elementos == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     fila->capacidade = MIN_QTD_ELEMT;
     fila->qtd = 0;
 

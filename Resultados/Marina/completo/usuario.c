@@ -17,6 +17,10 @@ struct Usuario {
 Usuario *criaUsuario(char *nome, char *cpf, Data * data, char * telefone, char * genero, char * setor){
     Usuario * user;
     user = (Usuario*)malloc(sizeof(Usuario));
+    if(user == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     
     strcpy(user->cpf, cpf);
     strcpy(user->nome, nome);
@@ -42,32 +46,18 @@ Usuario *lerUsuario(){
 
 
     scanf("%*[^0-9a-zA-Z]");
-    scanf("%[^\n]", nome);
-    scanf("%*[\n]");
-    scanf("%[^\n]", cpf);
-    scanf("%*[\n]");
+    scanf("%[^\n]\n", nome);
+    scanf("%[^\n]\n", cpf);
     nascimento = lerData();
-    scanf("%[^\n]", telefone);
-    scanf("%*[\n]");
-    scanf("%[^\n]", genero);
-    scanf("%*[\n]");
-    scanf("%[^\n]", setor);
-    scanf("%*[\n]");
-
+    scanf("%[^\n]\n", telefone);
+    scanf("%[^\n]\n", genero);
+    scanf("%[^\n]\n", setor);
 
 
     Usuario * user;
     user = criaUsuario(nome, cpf, nascimento, telefone, genero, setor);
     return user;
-/*
-U (caractere indicando cadastro de um usuário) 
-TAHM KENCH (nome) 
-123.932.250-46 (CPF) 
-01/09/1955 (data de nascimento) 
-(34)96373-7004 (telefone) 
-OUTROS (gênero) 
-RH (setor) 
-*/
+
 }
 
 void desalocaUsuario(void *u){
@@ -84,17 +74,6 @@ void notificaUsuario(void *dado){
     printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", ((Usuario*)dado)->nome, ((Usuario*)dado)->cpf);
     imprimeData(((Usuario*)dado)->data);
     printf("- Telefone: %s\n- Genero: %s\n- Setor: %s\n- Tickets solicitados: %d\n", ((Usuario*)dado)->telefone, ((Usuario*)dado)->genero, ((Usuario*)dado)->setor, ((Usuario*)dado)->qtdTicketsSolicitados);
-    
-
-
-    /*
-    - Nome: TAHM KENCH
-    - CPF: 123.932.250-46
-    - Data de Nascimento: 1/9/1955
-    - Telefone: (34)96373-7004
-    - Genero: OUTROS
-    - Setor: RH
-    - Tickets solicitados: 0*/
 }
 
 int comparaUsuariooECpf(Usuario * user, char * cpf){
@@ -113,7 +92,6 @@ int comparaDoisUsuarios(Usuario * user1, Usuario * user2){
 
 int getIdadeUsuarios(Usuario * user){
     Data * dataReferencia;
-    //18/02/2025
     dataReferencia = criarData(18, 2, 2025);
     int ano = calcularDiffAnosData(user->data, dataReferencia);
     liberaData(dataReferencia);
@@ -133,16 +111,16 @@ char * getCpfUsuario(Usuario * user){
 }
 
 int comparaDoisUsuariosRanking1(void * a, void * b){
-            // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
-            Usuario *us1 = *(Usuario **)a;
-            Usuario *us2 = *(Usuario **)b;
-        
-            if (us1->qtdTicketsSolicitados > us2->qtdTicketsSolicitados) {
-                return -1;
-            } else if  (us1->qtdTicketsSolicitados < us2->qtdTicketsSolicitados){
-                return 1;
-            } else {
-                // Critério de desempate: ordem alfabética do nome
-                return strcmp(us1->nome, us2->nome);
-            }
+    // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
+    Usuario *us1 = *(Usuario **)a;
+    Usuario *us2 = *(Usuario **)b;
+
+    if (us1->qtdTicketsSolicitados > us2->qtdTicketsSolicitados) {
+        return -1;
+    } else if  (us1->qtdTicketsSolicitados < us2->qtdTicketsSolicitados){
+        return 1;
+    } else {
+        // Critério de desempate: ordem alfabética do nome
+        return strcmp(us1->nome, us2->nome);
+    }
 }

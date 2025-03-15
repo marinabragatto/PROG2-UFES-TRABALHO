@@ -77,11 +77,3 @@ void notificaManutencao(void *dado);
 
 #endif
 
-
-/*MANUTENCAO: ticket que será solicitado para realizar manutenção de algum 
-equipamento em geral. É necessário informar: 
-○ Nome do item a ser executado a manutenção (string com no máximo 
-100 caracteres) 
-○ O estado do item (RUIM, REGULAR ou BOM) 
-○ O local exato onde se encontra o item (string com no máximo 100 
-caracteres) */

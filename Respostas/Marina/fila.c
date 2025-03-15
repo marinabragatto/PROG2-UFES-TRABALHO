@@ -15,8 +15,16 @@ Fila *criaFila(){
     Fila * fila;
 
     fila = (Fila*)malloc(sizeof(Fila));
+    if(fila == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
 
     fila->elementos = (Ticket**)malloc(sizeof(Ticket*)*MIN_QTD_ELEMT);
+    if(fila->elementos == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     fila->capacidade = MIN_QTD_ELEMT;
     fila->qtd = 0;
 
@@ -44,6 +52,10 @@ void insereTicketFila(Fila *f, char *cpfSol, void *dado, func_ptr_tempoEstimado 
         
         if(f->qtd >= f->capacidade){
             f->elementos = (Ticket**)realloc(f->elementos, sizeof(Ticket*)*(f->capacidade+MIN_QTD_ELEMT));
+            if(f->elementos == NULL){
+                printf("erro ao alocar\n");
+                exit(1);
+            }
             f->capacidade += MIN_QTD_ELEMT;
         }
         char id[MAX_TAM_ID];

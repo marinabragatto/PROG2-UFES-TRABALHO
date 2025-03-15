@@ -2,48 +2,6 @@
 
 
 
-int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo){
-    int i = 0, size = 0;
-    size = VectorSize(v);
-
-    int somatorio = 0;
-
-    void * perfilGenerico;
-
-
-    for(i = 0 ; i < size; i++){
-        perfilGenerico = VectorGet(v,i);
-        
-        if(tipo == TECNICO){
-            somatorio += getIdadeTecnico(perfilGenerico);
-        }
-        else if(tipo == USUARIO){
-            somatorio += getIdadeUsuarios(perfilGenerico);
-        }
-    
-        
-    }
-    return somatorio/size;
-}
-
-int calculaMediaHorasTrabalhadasTecnicos(Vector * listaTec){
-    int i = 0, size = 0;
-    size = VectorSize(listaTec);
-
-    int somatorio = 0;
-
-    void * perfilGenerico;
-
-
-    for(i = 0 ; i < size; i++){
-        perfilGenerico = VectorGet(listaTec,i);
-        
-        somatorio += getTempoTrabalhadoTecnicos(perfilGenerico);
-        
-    }
-    return somatorio/size;
-}
-
 void imprimeBancoUsuarios(Vector * listaUsuarios){
     int i =0, tamanho = 0;
 
@@ -101,7 +59,7 @@ void imprimeRankingTecnicos(Vector * listaTec){
     }
     destroiParcialmenteOrdenado(ordenado);
     printf("-------------------------------\n\n");
-   // VectorDestroy(ordenado, desalocaTecnico);
+
 
 }
 

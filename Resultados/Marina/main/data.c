@@ -7,6 +7,10 @@ struct Data {
 Data *lerData(){
     Data * d;
     d = (Data*)malloc(sizeof(Data));
+    if(d == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     scanf("%*[^0-9]");
     scanf("%d/%d/%d\n", &d->dia, &d->mes, &d->ano);
 

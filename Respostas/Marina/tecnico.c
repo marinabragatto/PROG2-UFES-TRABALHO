@@ -22,6 +22,10 @@ Tecnico *criaTecnico(char *nome, char *cpf, Data * data, char * telefone, char *
     Tecnico * tec;
 
     tec = (Tecnico*)malloc(sizeof(Tecnico));
+    if(tec == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
 
     tec->salario = salario;
     tec->disponibilidadeTrab = disponibilidadeTrab;
@@ -49,34 +53,18 @@ Tecnico *lerTecnico(){
     float salario = 0;
     
     scanf("%*[^0-9a-zA-Z]");
-    scanf("%[^\n]", nome);
-    scanf("%*[\n]");
-    scanf("%[^\n]", cpf);
-    scanf("%*[\n]");
+    scanf("%[^\n]\n", nome);
+    scanf("%[^\n]\n", cpf);
     nascimento = lerData();
-    scanf("%[^\n]", telefone);
-    scanf("%*[\n]");
-    scanf("%[^\n]", genero);
-    scanf("%*[\n]");
-    scanf("%[^\n]", areaAtuacao);
-    scanf("%*[\n]");
+    scanf("%[^\n]\n", telefone);
+    scanf("%[^\n]\n", genero);
+    scanf("%[^\n]\n", areaAtuacao);
     scanf("%d\n", &dispoTrab);
     scanf("%f\n", &salario);
-
-
 
     Tecnico * tec ;
     tec = criaTecnico(nome, cpf, nascimento, telefone, genero, areaAtuacao, dispoTrab, salario);
     return tec;
-/*
-HEIMERDINGER GARCIA (nome) 
-456.987.123-96 (CPF) 
-20/10/1945 (data de nascimento) 
-(90)99876-1234 (telefone) 
-MASCULINO (gênero) 
-GERAL (área de atuação) 
-20 (disponibilidade de trabalho) 
-3500 (salário) */
 
 }
 
@@ -91,33 +79,10 @@ void desalocaTecnico(void *t){
 }
 
 void notificaTecnico(void *dado){
-    //((Tecnico*)dado)
     printf("--------------------\n");
     printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", ((Tecnico*)dado)->nome, ((Tecnico*)dado)->cpf);
     imprimeData(((Tecnico*)dado)->data);
     printf("- Telefone: %s\n- Genero: %s\n- Area de Atuacao: %s\n- Salario: %.2f\n- Disponibilidade: %dh\n- Tempo Trabalhado: %dh\n",((Tecnico*)dado)->telefone, ((Tecnico*)dado)->genero, ((Tecnico*)dado)->areaAtuacao, ((Tecnico*)dado)->salario, ((Tecnico*)dado)->disponibilidadeTrab, ((Tecnico*)dado)->tempoTrabalhado);
-
-
- /*   - Nome: JAYCE BARBOSA
-    - CPF: 854.632.894-20
-    - Data de Nascimento: 22/2/1990
-    - Telefone: (37)9938-3382
-    - Genero: MASCULINO
-    - Area de Atuacao: GERAL
-    - Salario: 2000.00
-    - Disponibilidade: 7h
-    - Tempo Trabalhado: 0h
-
-    - Nome: HEIMERDINGER GARCIA
-- CPF: 456.987.123-96
-- Data de Nascimento: 20/10/1945
-- Telefone: (90)99876-1234
-- Genero: MASCULINO
-- Area de Atuacao: GERAL
-- Salario: 3500.00
-- Disponibilidade: 9h
-- Tempo Trabalhado: 11h
-*/
 }
 
 float getSalarioTecnico(void *dado){
@@ -144,7 +109,6 @@ int comparaDoisTecnicos(Tecnico * tecnico1, Tecnico * tecnico2){
 
 int getIdadeTecnico(Tecnico * tecnico){
     Data * dataReferencia;
-    //18/02/2025
     dataReferencia = criarData(18, 2, 2025);
     int ano = calcularDiffAnosData(tecnico->data, dataReferencia);
     liberaData(dataReferencia);
@@ -163,40 +127,19 @@ char * getAreaAtuacaoTecnico(Tecnico * tecnico){
 
 int comparaDoisTecnicosRanking1(void * a, void * b){
     
-        // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
-        Tecnico *tec1 = *(Tecnico **)a;
-        Tecnico *tec2 = *(Tecnico **)b;
-    
-        if (tec1->tempoTrabalhado > tec2->tempoTrabalhado) {
-            return -1;
-        } else if (tec1->tempoTrabalhado < tec2->tempoTrabalhado) {
-            return 1;
-        } else {
-            // Critério de desempate: ordem alfabética do nome
-            return strcmp(tec1->nome, tec2->nome);
-        }
-    
-    
-    /*
-    if(tec1->tempoTrabalhado > tec2->tempoTrabalhado){
+    // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
+    Tecnico *tec1 = *(Tecnico **)a;
+    Tecnico *tec2 = *(Tecnico **)b;
+
+    if (tec1->tempoTrabalhado > tec2->tempoTrabalhado) {
         return -1;
-    }
-    else if(tec1->tempoTrabalhado < tec2->tempoTrabalhado){
+    } else if (tec1->tempoTrabalhado < tec2->tempoTrabalhado) {
         return 1;
-    }
-    else if(tec1->tempoTrabalhado == tec2->tempoTrabalhado){
-        if(strcmp(tec1->nome, tec2->nome) < 0){
-            return -1;
-        }
-        else if(strcmp(tec1->nome, tec2->nome) > 0){
-            return 1;
-        }
-        else if(strcmp(tec1->nome, tec2->nome) == 0){
-            return 0;
-        }
+    } else {
+        // Critério de desempate: ordem alfabética do nome
+        return strcmp(tec1->nome, tec2->nome);
     }
 
-    return 0;*/
 
 }
 
@@ -205,4 +148,20 @@ Tecnico * tecnicoRecebeTicket(Tecnico * tec, Ticket * ticket){
     tec->disponibilidadeTrab -= desconto;
     tec->tempoTrabalhado += desconto;
     return tec;
+}
+
+int tecnicoPodePegarTicket(Tecnico * tec, Ticket * ticket){
+    char tipoTic = getTipoTicket(ticket);
+    int podeAtender = 0;
+
+    if (tipoTic == 'S' && strcmp(getAreaAtuacaoTecnico(tec), "TI") == 0) {
+        podeAtender = 1;
+    } else if ((tipoTic == 'O' || tipoTic == 'M') && strcmp(getAreaAtuacaoTecnico(tec), "TI") != 0) {
+        podeAtender = 1;
+    }
+
+    if (podeAtender && getDisponibilidadeTrabalhoTecnico(tec) >= getTempoEstimadoTicket(ticket)) {
+        return 1;
+    }
+    return 0;
 }

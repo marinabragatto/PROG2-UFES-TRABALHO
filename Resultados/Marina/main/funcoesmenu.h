@@ -13,6 +13,7 @@
 #include "usuario.h"
 #include "vetor.h"
 #include "mainsuport.h"
+#include "database.h"
 
 //Possui as opcoes do menu 'A' 'E'
 

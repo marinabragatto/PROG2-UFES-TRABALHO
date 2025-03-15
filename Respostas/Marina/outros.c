@@ -15,6 +15,10 @@ struct Outros {
 Outros *criaOutros(char *local , char * descricao, int nivelDif){
     Outros * out;
     out = (Outros*)malloc(sizeof(Outros));
+    if(out == NULL){
+        printf("erro ao alocar\n");
+        exit(1);
+    }
     
     out->nivelDif = nivelDif;
     out->tempoEstimado = 0;
@@ -32,12 +36,10 @@ Outros *lerOutros(){
     int nivelDif;
 
     scanf("%*[^0-9a-zA-Z]");
-    scanf("%[^\n]", descricao);
-    scanf("%*[\n]");
-    scanf("%[^\n]", local);
-    scanf("%*[\n]");
+    scanf("%[^\n]\n", descricao);
+    scanf("%[^\n]\n", local);
     scanf("%d\n", &nivelDif);
-   // printf("(%s) (%s)", descricao, local);
+
 
     Outros * out;
     out = criaOutros(local, descricao, nivelDif);
@@ -65,16 +67,10 @@ void desalocaOutros(void *o){
     if(o){
         free(o);
     }
-    // realizar uma tipagem?
 }
 
-/**
- * @brief  Imprime um ticket do tipo Software
- * @param dado  Ticket do tipo Software
- */
+
 void notificaOutros(void *dado){
-
-
     printf("- Tipo: Outros\n- Descricao: %s\n- Local: %s\n- Nivel de Dificuldade: %d\n- Tempo Estimado: %dh\n", ((Outros*)dado)->descricao, ((Outros*)dado)->local, ((Outros*)dado)->nivelDif, ((Outros*)dado)->tempoEstimado);
 
 }
