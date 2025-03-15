@@ -1,9 +1,9 @@
 funcoesmenu.c: In function ‘operacaoE’:
-funcoesmenu.c:42:22: warning: unused variable ‘i’ [-Wunused-variable]
-   42 |     int tamanho = 0, i = 0;
+funcoesmenu.c:41:22: warning: unused variable ‘i’ [-Wunused-variable]
+   41 |     int tamanho = 0, i = 0;
       |                      ^
-funcoesmenu.c:42:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
-   42 |     int tamanho = 0, i = 0;
+funcoesmenu.c:41:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
+   41 |     int tamanho = 0, i = 0;
       |         ^~~~~~~
 mainsuport.c: In function ‘imprimeFilaTickets’:
 mainsuport.c:83:9: warning: unused variable ‘i’ [-Wunused-variable]
@@ -21,8 +21,8 @@ vetor.h:50:37: note: expected ‘int (*)(const void *, const void *)’ but argu
    50 | void  ordenaVetor(Vector * v, int (*compar)(const void *, const void *));
       |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 mainsuport.c: In function ‘imprimeRankingUsuarios’:
-mainsuport.c:117:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
-  117 |     ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
+mainsuport.c:116:27: warning: passing argument 2 of ‘ordenaVetor’ from incompatible pointer type [-Wincompatible-pointer-types]
+  116 |     ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                           |
       |                           int (*)(void *, void *)

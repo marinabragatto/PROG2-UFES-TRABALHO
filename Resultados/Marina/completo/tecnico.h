@@ -34,10 +34,7 @@ int getIdadeTecnico(Tecnico * tecnico);
 
 int getTempoTrabalhadoTecnicos(Tecnico * tecnico);
 
-void DiminuiDisponibilidadeTecnico(Tecnico * tec, int desconto);
-
-void incrementaHorasTrabalhadasTecnico(Tecnico * tec, int desconto);
-
+Tecnico * atribuiTicketAoTecnico(Tecnico * tec, int desconto);
 
 int comparaDoisTecnicosRanking1(void * a, void * b);
 

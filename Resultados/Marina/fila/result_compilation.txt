@@ -1,4 +1,4 @@
 fila.c: In function ‘getQtdTicketsNaFila’:
-fila.c:94:9: warning: unused variable ‘i’ [-Wunused-variable]
-   94 |     int i = 0;
+fila.c:61:9: warning: unused variable ‘i’ [-Wunused-variable]
+   61 |     int i = 0;
       |         ^

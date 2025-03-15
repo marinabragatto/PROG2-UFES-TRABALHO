@@ -113,14 +113,14 @@ void imprimeRankingUsuarios(Vector * listaUsuarios){
     for(int i = 0; i < VectorSize(listaUsuarios); i++){
         VectorPushBack(ordenado, VectorGet(listaUsuarios,i));
     }
-
     ordenaVetor(ordenado, comparaDoisUsuariosRanking1);
+    
     printf("----- RANKING DE USUARIOS -----\n");
     for(int i = 0; i < VectorSize(ordenado); i++){
         notificaUsuario(VectorGet(ordenado, i));
     }
     destroiParcialmenteOrdenado(ordenado);
     printf("-------------------------------\n\n");
-   // VectorDestroy(ordenado, desalocaTecnico);
+
 
 }

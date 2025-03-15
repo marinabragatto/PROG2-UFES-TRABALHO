@@ -158,15 +158,6 @@ char * getAreaAtuacaoTecnico(Tecnico * tecnico){
     return tecnico->areaAtuacao;
 }
 
-void DiminuiDisponibilidadeTecnico(Tecnico * tec, int desconto){
-    tec->disponibilidadeTrab -= desconto;
-
-}
-
-void incrementaHorasTrabalhadasTecnico(Tecnico * tec, int desconto){
-    tec->tempoTrabalhado += desconto;
-}
-
 int comparaDoisTecnicosRanking1(void * a, void * b){
     
         // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
@@ -204,4 +195,10 @@ int comparaDoisTecnicosRanking1(void * a, void * b){
 
     return 0;*/
 
+}
+
+Tecnico * atribuiTicketAoTecnico(Tecnico * tec, int desconto){
+    tec->disponibilidadeTrab -= desconto;
+    tec->tempoTrabalhado += desconto;
+    return tec;
 }

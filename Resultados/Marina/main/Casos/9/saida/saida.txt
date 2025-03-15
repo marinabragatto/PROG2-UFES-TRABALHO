@@ -206,8 +206,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 2000.00
-- Disponibilidade: 9h
-- Tempo Trabalhado: 11h
+- Disponibilidade: 5h
+- Tempo Trabalhado: 15h
 --------------------
 - Nome: AHRI COSTA
 - CPF: 234.567.890-12
@@ -216,8 +216,8 @@
 - Genero: FEMININO
 - Area de Atuacao: GERAL
 - Salario: 4800.00
-- Disponibilidade: 25h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 16h
+- Tempo Trabalhado: 9h
 --------------------
 - Nome: YASUO FERREIRA
 - CPF: 345.678.901-23
@@ -226,8 +226,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 24h
-- Tempo Trabalhado: 16h
+- Disponibilidade: 16h
+- Tempo Trabalhado: 24h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -246,8 +246,8 @@
 - Genero: FEMININO
 - Area de Atuacao: GERAL
 - Salario: 3000.00
-- Disponibilidade: 2h
-- Tempo Trabalhado: 13h
+- Disponibilidade: 15h
+- Tempo Trabalhado: 0h
 --------------------
 - Nome: ZED ALMEIDA
 - CPF: 987.654.321-09
@@ -256,8 +256,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 4500.00
-- Disponibilidade: 2h
-- Tempo Trabalhado: 8h
+- Disponibilidade: 10h
+- Tempo Trabalhado: 0h
 ----------------------------
 ----- RANKING DE TECNICOS -----
 --------------------
@@ -268,18 +268,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 24h
-- Tempo Trabalhado: 16h
---------------------
-- Nome: LUX SILVA
-- CPF: 123.456.789-01
-- Data de Nascimento: 15/9/1985
-- Telefone: (11)98765-4321
-- Genero: FEMININO
-- Area de Atuacao: GERAL
-- Salario: 3000.00
-- Disponibilidade: 2h
-- Tempo Trabalhado: 13h
+- Disponibilidade: 16h
+- Tempo Trabalhado: 24h
 --------------------
 - Nome: JAYCE BARBOSA
 - CPF: 854.632.894-20
@@ -288,18 +278,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 2000.00
-- Disponibilidade: 9h
-- Tempo Trabalhado: 11h
---------------------
-- Nome: ZED ALMEIDA
-- CPF: 987.654.321-09
-- Data de Nascimento: 30/11/1995
-- Telefone: (21)91234-8765
-- Genero: MASCULINO
-- Area de Atuacao: TI
-- Salario: 4500.00
-- Disponibilidade: 2h
-- Tempo Trabalhado: 8h
+- Disponibilidade: 5h
+- Tempo Trabalhado: 15h
 --------------------
 - Nome: AHRI COSTA
 - CPF: 234.567.890-12
@@ -308,8 +288,8 @@
 - Genero: FEMININO
 - Area de Atuacao: GERAL
 - Salario: 4800.00
-- Disponibilidade: 25h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 16h
+- Tempo Trabalhado: 9h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -319,6 +299,26 @@
 - Area de Atuacao: TI
 - Salario: 4300.00
 - Disponibilidade: 22h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: LUX SILVA
+- CPF: 123.456.789-01
+- Data de Nascimento: 15/9/1985
+- Telefone: (11)98765-4321
+- Genero: FEMININO
+- Area de Atuacao: GERAL
+- Salario: 3000.00
+- Disponibilidade: 15h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: ZED ALMEIDA
+- CPF: 987.654.321-09
+- Data de Nascimento: 30/11/1995
+- Telefone: (21)91234-8765
+- Genero: MASCULINO
+- Area de Atuacao: TI
+- Salario: 4500.00
+- Disponibilidade: 10h
 - Tempo Trabalhado: 0h
 -------------------------------
 

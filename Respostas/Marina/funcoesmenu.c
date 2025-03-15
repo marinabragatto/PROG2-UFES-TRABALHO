@@ -1,7 +1,5 @@
 #include "funcoesmenu.h"
 
-
-
 Vector * operacaoT(Vector * tecnicos){
     Tecnico * tec;
     tec = lerTecnico();
@@ -14,6 +12,7 @@ Vector * operacaoT(Vector * tecnicos){
             return tecnicos;
         }
     }
+
     VectorPushBack(tecnicos, tec);
     return tecnicos;
 }
@@ -21,11 +20,11 @@ Vector * operacaoT(Vector * tecnicos){
 Vector * operacaoU(Vector * usuarios){
     Usuario * user;
     user = lerUsuario();
-    Usuario * pedinte;
+    Usuario * atual;
     
     for(int k = 0; k < VectorSize(usuarios); k++){
-        pedinte = VectorGet(usuarios, k);
-        if(comparaDoisUsuarios(pedinte, user)){
+        atual = VectorGet(usuarios, k);
+        if(comparaDoisUsuarios(atual, user)){
             desalocaUsuario(user);
             return usuarios;
         }
@@ -56,44 +55,42 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
         Ticket * ticketAtual;
        
         int j = 0;
-        int k = 0;
+        
         while(j < getQtdTicketsNaFila(fila)){
-
             ticketAtual = getTicketNaFila(fila, j);
-           
+           // O ticket já se encontra finalizado
             if(getStatusTicket(ticketAtual) != 'A'){
                 j++;
                 continue;
             }
-
+            // Pega o tipo do ticket 'S', 'O', 'M'
             char tipoTic = getTipoTicket(ticketAtual);
-            int podeAtender = 0;
+            
+            // Variável que conta por quantos técnicos foram passados um ticket 
             int passouPorTodosTec = 0;
             
-
+            int k = 0;
             while(passouPorTodosTec < VectorSize(listaTec) && k < VectorSize(listaTec)){
-
                 Tecnico * tecAnalise;
-            
+                // Pega o técnico de índice k
                 tecAnalise = VectorGet(listaTec, k);
-                podeAtender = 0;
+
+                // Variável que verifica se o técnico atual pode atender de acordo com !ÁREA DE ATUAÇÃO!
+                int podeAtender = 0;
+            
                 if (tipoTic == 'S' && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") == 0) {
                     podeAtender = 1;
                 } else if ((tipoTic == 'O' || tipoTic == 'M') && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") != 0) {
                     podeAtender = 1;
                 }
-                
                 passouPorTodosTec++;
-
-                if (podeAtender && getDisponibilidadeTrabalhoTecnico(tecAnalise) >= getTempoEstimadoTicket(ticketAtual)) {
-
+                
+                if (podeAtender && getDisponibilidadeTrabalhoTecnico(tecAnalise) >= getTempoEstimadoTicket(ticketAtual)) { // Técnico
                     int desconto = getTempoEstimadoTicket(ticketAtual);
-                    DiminuiDisponibilidadeTecnico(tecAnalise, desconto);
-                    incrementaHorasTrabalhadasTecnico(tecAnalise, desconto);
-                    finalizaTicket(ticketAtual);
-                            
-                    k++;
-                    break; // Sai do loop porque o ticket foi atribuído
+                    tecAnalise = atribuiTicketAoTecnico(tecAnalise, desconto);
+                    finalizaTicket(ticketAtual);        
+                    k++; // Avança para próximo técnico
+                    break; // Sai do loop mais interno porque o ticket foi atribuído
                 }
                 else{ 
                     k++;
