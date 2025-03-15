@@ -57,6 +57,11 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
        
         int j = 0;
         int k = 0;
+
+        for(j = 0; j < getQtdTicketsNaFila(fila); j++){
+
+        }
+
         while(j < getQtdTicketsNaFila(fila)){
 
             ticketAtual = getTicketNaFila(fila, j);
