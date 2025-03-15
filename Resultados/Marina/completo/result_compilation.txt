@@ -3,11 +3,11 @@ fila.c:61:9: warning: unused variable ‘i’ [-Wunused-variable]
    61 |     int i = 0;
       |         ^
 funcoesmenu.c: In function ‘operacaoE’:
-funcoesmenu.c:41:22: warning: unused variable ‘i’ [-Wunused-variable]
-   41 |     int tamanho = 0, i = 0;
+funcoesmenu.c:42:22: warning: unused variable ‘i’ [-Wunused-variable]
+   42 |     int tamanho = 0, i = 0;
       |                      ^
-funcoesmenu.c:41:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
-   41 |     int tamanho = 0, i = 0;
+funcoesmenu.c:42:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
+   42 |     int tamanho = 0, i = 0;
       |         ^~~~~~~
 mainsuport.c: In function ‘imprimeFilaTickets’:
 mainsuport.c:83:9: warning: unused variable ‘i’ [-Wunused-variable]

@@ -1,3 +1,4 @@
+
 #ifndef _TECNICO_H
 #define _TECNICO_H
 
@@ -34,7 +35,8 @@ int getIdadeTecnico(Tecnico * tecnico);
 
 int getTempoTrabalhadoTecnicos(Tecnico * tecnico);
 
-Tecnico * atribuiTicketAoTecnico(Tecnico * tec, int desconto);
+
+Tecnico * tecnicoRecebeTicket(Tecnico * tec, Ticket * ticket);
 
 int comparaDoisTecnicosRanking1(void * a, void * b);
 

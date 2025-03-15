@@ -16,7 +16,6 @@
 
 int main(){
     char op = 'a';
-    
     Vector * listaTec;
     Vector * listaUsuarios;
     Fila * fila;
@@ -50,3 +49,4 @@ int main(){
 
     return  0;
 }
+

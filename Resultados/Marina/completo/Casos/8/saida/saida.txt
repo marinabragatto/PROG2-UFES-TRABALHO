@@ -7,8 +7,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 4000.00
-- Disponibilidade: 24h
-- Tempo Trabalhado: 6h
+- Disponibilidade: 27h
+- Tempo Trabalhado: 3h
 --------------------
 - Nome: AHRI COSTA
 - CPF: 234.567.890-12
@@ -17,8 +17,8 @@
 - Genero: FEMININO
 - Area de Atuacao: GERAL
 - Salario: 4800.00
-- Disponibilidade: 25h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 22h
+- Tempo Trabalhado: 3h
 --------------------
 - Nome: YASUO FERREIRA
 - CPF: 345.678.901-23
@@ -27,8 +27,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 25h
-- Tempo Trabalhado: 15h
+- Disponibilidade: 33h
+- Tempo Trabalhado: 7h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -37,8 +37,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 4300.00
-- Disponibilidade: 22h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 14h
+- Tempo Trabalhado: 8h
 ----------------------------
 ----- FILA DE TICKETS -----
 ---------TICKET-----------

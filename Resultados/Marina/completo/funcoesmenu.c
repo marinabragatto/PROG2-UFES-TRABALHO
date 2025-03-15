@@ -1,5 +1,7 @@
 #include "funcoesmenu.h"
 
+
+
 Vector * operacaoT(Vector * tecnicos){
     Tecnico * tec;
     tec = lerTecnico();
@@ -12,7 +14,6 @@ Vector * operacaoT(Vector * tecnicos){
             return tecnicos;
         }
     }
-
     VectorPushBack(tecnicos, tec);
     return tecnicos;
 }
@@ -20,11 +21,11 @@ Vector * operacaoT(Vector * tecnicos){
 Vector * operacaoU(Vector * usuarios){
     Usuario * user;
     user = lerUsuario();
-    Usuario * atual;
+    Usuario * pedinte;
     
     for(int k = 0; k < VectorSize(usuarios); k++){
-        atual = VectorGet(usuarios, k);
-        if(comparaDoisUsuarios(atual, user)){
+        pedinte = VectorGet(usuarios, k);
+        if(comparaDoisUsuarios(pedinte, user)){
             desalocaUsuario(user);
             return usuarios;
         }
@@ -55,41 +56,38 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
         Ticket * ticketAtual;
        
         int j = 0;
-        
+        int k = 0;
         while(j < getQtdTicketsNaFila(fila)){
+
             ticketAtual = getTicketNaFila(fila, j);
-           // O ticket já se encontra finalizado
+           
             if(getStatusTicket(ticketAtual) != 'A'){
                 j++;
                 continue;
             }
-            // Pega o tipo do ticket 'S', 'O', 'M'
+
             char tipoTic = getTipoTicket(ticketAtual);
-            
-            // Variável que conta por quantos técnicos foram passados um ticket 
+            int podeAtender = 0;
             int passouPorTodosTec = 0;
             
-            int k = 0;
-            while(passouPorTodosTec < VectorSize(listaTec) && k < VectorSize(listaTec)){
-                Tecnico * tecAnalise;
-                // Pega o técnico de índice k
-                tecAnalise = VectorGet(listaTec, k);
 
-                // Variável que verifica se o técnico atual pode atender de acordo com !ÁREA DE ATUAÇÃO!
-                int podeAtender = 0;
+            while(passouPorTodosTec < VectorSize(listaTec) && k < VectorSize(listaTec)){
+
+                Tecnico * tecAnalise;
             
+                tecAnalise = VectorGet(listaTec, k);
+                podeAtender = 0;
                 if (tipoTic == 'S' && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") == 0) {
                     podeAtender = 1;
                 } else if ((tipoTic == 'O' || tipoTic == 'M') && strcmp(getAreaAtuacaoTecnico(tecAnalise), "TI") != 0) {
                     podeAtender = 1;
                 }
+                
                 passouPorTodosTec++;
 
                 if (podeAtender && getDisponibilidadeTrabalhoTecnico(tecAnalise) >= getTempoEstimadoTicket(ticketAtual)) {
-
-                    int desconto = getTempoEstimadoTicket(ticketAtual);
-                    tecAnalise = atribuiTicketAoTecnico(tecAnalise, desconto);
-                    finalizaTicket(ticketAtual);        
+                    tecAnalise = tecnicoRecebeTicket(tecAnalise, ticketAtual);
+                    finalizaTicket(ticketAtual);         
                     k++;
                     break; // Sai do loop porque o ticket foi atribuído
                 }
@@ -220,4 +218,3 @@ Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
     return fila;
 
 }
-

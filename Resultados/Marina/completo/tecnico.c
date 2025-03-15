@@ -1,8 +1,8 @@
-#include "tecnico.h"
+#include "ticket.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "tecnico.h"
 struct Tecnico{
     char nome[MAX_TAM_NOME_TECNICO];
     char cpf[MAX_TAM_CPF];
@@ -158,6 +158,8 @@ char * getAreaAtuacaoTecnico(Tecnico * tecnico){
     return tecnico->areaAtuacao;
 }
 
+
+
 int comparaDoisTecnicosRanking1(void * a, void * b){
     
         // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
@@ -197,7 +199,8 @@ int comparaDoisTecnicosRanking1(void * a, void * b){
 
 }
 
-Tecnico * atribuiTicketAoTecnico(Tecnico * tec, int desconto){
+Tecnico * tecnicoRecebeTicket(Tecnico * tec, Ticket * ticket){
+    int desconto = getTempoEstimadoTicket(ticket);
     tec->disponibilidadeTrab -= desconto;
     tec->tempoTrabalhado += desconto;
     return tec;
