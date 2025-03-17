@@ -53,7 +53,6 @@ int userJaCadastradoBanco(Vector * usuarios, Usuario * user){
     for(int k = 0; k < VectorSize(usuarios); k++){
         atual = VectorGet(usuarios, k);
         if(comparaDoisUsuarios(atual, user)){
-            desalocaUsuario(user);
             return 1;
         }
     }
@@ -67,7 +66,6 @@ int tecnicoJaCadastradoBanco(Vector * tecnicos, Tecnico * tec){
     for(int k = 0; k < VectorSize(tecnicos); k++){
         atual = VectorGet(tecnicos, k);
         if(comparaDoisTecnicos(atual, tec)){
-            desalocaTecnico(tec);
             return 1;
         }
     }

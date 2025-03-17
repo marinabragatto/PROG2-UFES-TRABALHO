@@ -1,21 +1,132 @@
-fila.c: In function ‘getQtdTicketsNaFila’:
-fila.c:69:9: warning: unused variable ‘i’ [-Wunused-variable]
-   69 |     int i = 0;
-      |         ^
-funcoesmenu.c: In function ‘operacaoE’:
-funcoesmenu.c:31:22: warning: unused variable ‘i’ [-Wunused-variable]
-   31 |     int tamanho = 0, i = 0;
-      |                      ^
-funcoesmenu.c:31:9: warning: unused variable ‘tamanho’ [-Wunused-variable]
-   31 |     int tamanho = 0, i = 0;
-      |         ^~~~~~~
-mainsuport.c: In function ‘imprimeRelatorio’:
-mainsuport.c:28:21: warning: implicit declaration of function ‘calculaMediaIdadePorTipo’ [-Wimplicit-function-declaration]
-   28 |     mediaIdadeTec = calculaMediaIdadePorTipo(listaTec, TECNICO);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
-mainsuport.c:30:25: warning: implicit declaration of function ‘calculaMediaHorasTrabalhadasTecnicos’ [-Wimplicit-function-declaration]
-   30 |     mediaHorasTrabTec = calculaMediaHorasTrabalhadasTecnicos(listaTec);
-      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from funcoesmenu.h:15,
+                 from database.c:1:
+mainsuport.h:21:5: error: redeclaration of enumerator ‘TECNICO’
+   21 |     TECNICO,
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from database.c:1:
+database.h:5:5: note: previous definition of ‘TECNICO’ with type ‘enum <anonymous>’
+    5 |     TECNICO,
+      |     ^~~~~~~
+In file included from funcoesmenu.h:15,
+                 from database.c:1:
+mainsuport.h:22:5: error: redeclaration of enumerator ‘USUARIO’
+   22 |     USUARIO
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from database.c:1:
+database.h:6:5: note: previous definition of ‘USUARIO’ with type ‘enum <anonymous>’
+    6 |     USUARIO
+      |     ^~~~~~~
+In file included from funcoesmenu.h:15,
+                 from database.c:1:
+mainsuport.h:23:3: error: conflicting types for ‘FuncaoTipo’; have ‘enum <anonymous>’
+   23 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from database.c:1:
+database.h:7:3: note: previous declaration of ‘FuncaoTipo’ with type ‘FuncaoTipo’
+    7 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+database.c:76:5: error: conflicting types for ‘calculaMediaIdadePorTipo’; have ‘int(Vector *, FuncaoTipo)’
+   76 | int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo){
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from database.c:1:
+database.h:21:5: note: previous declaration of ‘calculaMediaIdadePorTipo’ with type ‘int(Vector *, FuncaoTipo)’
+   21 | int calculaMediaIdadePorTipo(Vector * v, FuncaoTipo tipo);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+mainsuport.h:21:5: error: redeclaration of enumerator ‘TECNICO’
+   21 |     TECNICO,
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+database.h:5:5: note: previous definition of ‘TECNICO’ with type ‘enum <anonymous>’
+    5 |     TECNICO,
+      |     ^~~~~~~
+In file included from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+mainsuport.h:22:5: error: redeclaration of enumerator ‘USUARIO’
+   22 |     USUARIO
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+database.h:6:5: note: previous definition of ‘USUARIO’ with type ‘enum <anonymous>’
+    6 |     USUARIO
+      |     ^~~~~~~
+In file included from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+mainsuport.h:23:3: error: conflicting types for ‘FuncaoTipo’; have ‘enum <anonymous>’
+   23 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from mainsuport.h:15,
+                 from funcoesmenu.h:15,
+                 from funcoesmenu.c:1:
+database.h:7:3: note: previous declaration of ‘FuncaoTipo’ with type ‘FuncaoTipo’
+    7 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from main.c:12:
+mainsuport.h:21:5: error: redeclaration of enumerator ‘TECNICO’
+   21 |     TECNICO,
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from main.c:12:
+database.h:5:5: note: previous definition of ‘TECNICO’ with type ‘enum <anonymous>’
+    5 |     TECNICO,
+      |     ^~~~~~~
+In file included from main.c:12:
+mainsuport.h:22:5: error: redeclaration of enumerator ‘USUARIO’
+   22 |     USUARIO
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from main.c:12:
+database.h:6:5: note: previous definition of ‘USUARIO’ with type ‘enum <anonymous>’
+    6 |     USUARIO
+      |     ^~~~~~~
+In file included from main.c:12:
+mainsuport.h:23:3: error: conflicting types for ‘FuncaoTipo’; have ‘enum <anonymous>’
+   23 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from mainsuport.h:15,
+                 from main.c:12:
+database.h:7:3: note: previous declaration of ‘FuncaoTipo’ with type ‘FuncaoTipo’
+    7 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from mainsuport.c:1:
+mainsuport.h:21:5: error: redeclaration of enumerator ‘TECNICO’
+   21 |     TECNICO,
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from mainsuport.c:1:
+database.h:5:5: note: previous definition of ‘TECNICO’ with type ‘enum <anonymous>’
+    5 |     TECNICO,
+      |     ^~~~~~~
+In file included from mainsuport.c:1:
+mainsuport.h:22:5: error: redeclaration of enumerator ‘USUARIO’
+   22 |     USUARIO
+      |     ^~~~~~~
+In file included from mainsuport.h:15,
+                 from mainsuport.c:1:
+database.h:6:5: note: previous definition of ‘USUARIO’ with type ‘enum <anonymous>’
+    6 |     USUARIO
+      |     ^~~~~~~
+In file included from mainsuport.c:1:
+mainsuport.h:23:3: error: conflicting types for ‘FuncaoTipo’; have ‘enum <anonymous>’
+   23 | } FuncaoTipo;
+      |   ^~~~~~~~~~
+In file included from mainsuport.h:15,
+                 from mainsuport.c:1:
+database.h:7:3: note: previous declaration of ‘FuncaoTipo’ with type ‘FuncaoTipo’
+    7 | } FuncaoTipo;
+      |   ^~~~~~~~~~
 mainsuport.c: In function ‘imprimeFilaTickets’:
 mainsuport.c:41:9: warning: unused variable ‘i’ [-Wunused-variable]
    41 |     int i = 0;
@@ -62,3 +173,8 @@ vetor.c:26:9: warning: incompatible implicit declaration of built-in function �
    26 |         printf("erro ao alocar\n");
       |         ^~~~~~
 vetor.c:26:9: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+vetor.c: In function ‘VectorPushBack’:
+vetor.c:41:13: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   41 |             printf("erro ao alocar\n");
+      |             ^~~~~~
+vetor.c:41:13: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’

@@ -59,7 +59,7 @@ void setTempoEstimadoSoftware(Software *s){
         s->tempoEstimado = TEMPO_ESTIMADO_DUVIDA + s->impacto;
     }
     if(strcmp(s->categoria, "OUTROS") == 0){
-        s->tempoEstimado = TEMPO_ESTIMADO_DUVIDA + s->impacto;
+        s->tempoEstimado = TEMPO_ESTIMADO_OUTROS + s->impacto;
     }
 
 }

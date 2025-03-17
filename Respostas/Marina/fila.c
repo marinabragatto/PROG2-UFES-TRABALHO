@@ -70,7 +70,6 @@ void insereTicketFila(Fila *f, char *cpfSol, void *dado, func_ptr_tempoEstimado 
 }
 
 int getQtdTicketsNaFila(Fila *f){
-    int i = 0;
     return f->qtd;
 
 }

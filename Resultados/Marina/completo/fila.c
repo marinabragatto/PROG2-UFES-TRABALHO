@@ -52,6 +52,10 @@ void insereTicketFila(Fila *f, char *cpfSol, void *dado, func_ptr_tempoEstimado 
         
         if(f->qtd >= f->capacidade){
             f->elementos = (Ticket**)realloc(f->elementos, sizeof(Ticket*)*(f->capacidade+MIN_QTD_ELEMT));
+            if(f->elementos == NULL){
+                printf("erro ao alocar\n");
+                exit(1);
+            }
             f->capacidade += MIN_QTD_ELEMT;
         }
         char id[MAX_TAM_ID];
@@ -66,7 +70,6 @@ void insereTicketFila(Fila *f, char *cpfSol, void *dado, func_ptr_tempoEstimado 
 }
 
 int getQtdTicketsNaFila(Fila *f){
-    int i = 0;
     return f->qtd;
 
 }

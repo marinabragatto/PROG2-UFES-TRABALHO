@@ -12,6 +12,8 @@
 #include "tecnico.h"
 #include "usuario.h"
 #include "vetor.h"
+#include "database.h"
+
 
 #define TAM_MAX_OPERACAO 30
 

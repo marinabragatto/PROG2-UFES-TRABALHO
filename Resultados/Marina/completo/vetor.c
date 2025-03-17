@@ -37,7 +37,10 @@ void VectorPushBack(Vector *v, data val){
     
     if(tamAtual >= tamMax){
         v->data = realloc (v->data, sizeof(data)*(tamAtual + tamMax));
-        
+        if(v->data == NULL){
+            printf("erro ao alocar\n");
+            exit(1);
+        }
         v->tamMax += TAM_MAX;
     }
 

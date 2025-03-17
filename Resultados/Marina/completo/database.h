@@ -1,6 +1,10 @@
 #ifndef _DATABASE_H
 #define _DATABASE_H
 
+typedef enum {
+    TECNICO,
+    USUARIO
+} FuncaoTipo;
 
 typedef struct DataBase DataBase;
 

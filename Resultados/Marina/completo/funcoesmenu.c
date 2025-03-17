@@ -8,6 +8,9 @@ Vector * operacaoT(Vector * tecnicos){
     if(!tecnicoJaCadastradoBanco(tecnicos, tec)){
         VectorPushBack(tecnicos, tec);
     }
+    else{
+        desalocaTecnico(tec);
+    }
     
     return tecnicos;
 }
@@ -19,6 +22,9 @@ Vector * operacaoU(Vector * usuarios){
     if(!userJaCadastradoBanco(usuarios, user)){
         VectorPushBack(usuarios, user);
     }
+    else{
+        desalocaUsuario(user);
+    }
 
     return usuarios;
 }
@@ -28,7 +34,7 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
     scanf("%[^\n]", operacao);
     scanf("%*[\n]");
 
-    int tamanho = 0, i = 0;
+
 
 
     if(strcmp(operacao, "USUARIOS")==0){
@@ -103,9 +109,7 @@ Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
     scanf("%*[\n]");
     scanf("%[^\n]", tipo);
     scanf("%*[\n]");
-
-
-    // analisar se o cpf existe
+    
 
     int k = 0;
     
@@ -115,7 +119,7 @@ Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
     setor[0] = '\0'; 
 
     
-
+    // Analisar se o cpf existe, se pedinte == NULL, o ticket é ignorado
     for(k = 0; k < VectorSize(listaUsuarios); k++){
         if(comparaUsuariooECpf(VectorGet(listaUsuarios, k), cpf)){
             pedinte = VectorGet(listaUsuarios, k);
@@ -131,7 +135,7 @@ Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
         Outros * out;
         out = lerOutros();
         if(pedinte != NULL){
-           setTempoEstimadoOutros(out);
+            setTempoEstimadoOutros(out);
             insereTicketFila(fila, cpf, out, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
         }
         else{

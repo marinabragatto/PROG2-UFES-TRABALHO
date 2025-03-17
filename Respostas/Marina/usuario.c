@@ -84,6 +84,7 @@ int comparaUsuariooECpf(Usuario * user, char * cpf){
 }
 
 int comparaDoisUsuarios(Usuario * user1, Usuario * user2){
+    // Se os usuarios são iguais retorna 1;
     if(strcmp(user1->cpf, user2->cpf) == 0){
         return 1;
     }

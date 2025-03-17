@@ -101,6 +101,7 @@ int comparaTecnicoECpf(Tecnico * tecnico, char * cpf){
 }
 
 int comparaDoisTecnicos(Tecnico * tecnico1, Tecnico * tecnico2){
+    // Se os tecnicos são iguais retorna 1;
     if(strcmp(tecnico1->cpf, tecnico2->cpf) == 0){
         return 1;
     }
