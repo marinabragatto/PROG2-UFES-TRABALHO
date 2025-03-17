@@ -1,15 +1,15 @@
-==45047== Memcheck, a memory error detector
-==45047== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==45047== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==45047== Command: Resultados/Marina/software/prog Resultados/Marina/software/Casos/4
-==45047== Parent PID: 45046
-==45047== 
-==45047== 
-==45047== HEAP SUMMARY:
-==45047==     in use at exit: 0 bytes in 0 blocks
-==45047==   total heap usage: 58 allocs, 58 frees, 6,152 bytes allocated
-==45047== 
-==45047== All heap blocks were freed -- no leaks are possible
-==45047== 
-==45047== For lists of detected and suppressed errors, rerun with: -s
-==45047== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==54632== Memcheck, a memory error detector
+==54632== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==54632== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==54632== Command: Resultados/Marina/software/prog Resultados/Marina/software/Casos/4
+==54632== Parent PID: 54631
+==54632== 
+==54632== 
+==54632== HEAP SUMMARY:
+==54632==     in use at exit: 0 bytes in 0 blocks
+==54632==   total heap usage: 58 allocs, 58 frees, 6,152 bytes allocated
+==54632== 
+==54632== All heap blocks were freed -- no leaks are possible
+==54632== 
+==54632== For lists of detected and suppressed errors, rerun with: -s
+==54632== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

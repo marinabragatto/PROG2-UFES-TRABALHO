@@ -17,10 +17,6 @@
 
 #define TAM_MAX_OPERACAO 30
 
-typedef enum {
-    TECNICO,
-    USUARIO
-} FuncaoTipo;
 
 
 void imprimeBancoUsuarios(Vector * listaUsuarios);
