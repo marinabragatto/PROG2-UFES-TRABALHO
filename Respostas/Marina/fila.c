@@ -95,6 +95,7 @@ void notificaFila(Fila *f){
 
     for(i = 0; i < f->qtd; i++){
         notificaTicket(f->elementos[i]);
+        printf("\n");
     }
 
 }

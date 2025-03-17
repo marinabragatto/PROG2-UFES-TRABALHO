@@ -1,15 +1,15 @@
-==118179== Memcheck, a memory error detector
-==118179== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==118179== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==118179== Command: Resultados/Marina/completo/prog Resultados/Marina/completo/Casos/2
-==118179== Parent PID: 118178
-==118179== 
-==118179== 
-==118179== HEAP SUMMARY:
-==118179==     in use at exit: 0 bytes in 0 blocks
-==118179==   total heap usage: 32 allocs, 32 frees, 3,560 bytes allocated
-==118179== 
-==118179== All heap blocks were freed -- no leaks are possible
-==118179== 
-==118179== For lists of detected and suppressed errors, rerun with: -s
-==118179== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==124030== Memcheck, a memory error detector
+==124030== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==124030== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==124030== Command: Resultados/Marina/completo/prog Resultados/Marina/completo/Casos/2
+==124030== Parent PID: 124029
+==124030== 
+==124030== 
+==124030== HEAP SUMMARY:
+==124030==     in use at exit: 0 bytes in 0 blocks
+==124030==   total heap usage: 32 allocs, 32 frees, 3,560 bytes allocated
+==124030== 
+==124030== All heap blocks were freed -- no leaks are possible
+==124030== 
+==124030== For lists of detected and suppressed errors, rerun with: -s
+==124030== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

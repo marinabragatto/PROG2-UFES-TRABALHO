@@ -29,6 +29,7 @@
 - Status: Finalizado
 -------------------------
 
+
 ---------TICKET-----------
 - ID: Tick-2
 - Usuario solicitante: 123.932.250-46
@@ -39,6 +40,7 @@
 - Tempo Estimado: 5h
 - Status: Finalizado
 -------------------------
+
 
 ---------TICKET-----------
 - ID: Tick-3
@@ -51,6 +53,7 @@
 - Status: Finalizado
 -------------------------
 
+
 ---------TICKET-----------
 - ID: Tick-4
 - Usuario solicitante: 524.456.852-98
@@ -62,6 +65,7 @@
 - Tempo estimado: 3h
 - Status: Finalizado
 -------------------------
+
 
 ---------------------------
 
