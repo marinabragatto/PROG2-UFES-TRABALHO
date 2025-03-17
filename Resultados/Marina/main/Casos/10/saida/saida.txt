@@ -1,0 +1,49 @@
+----- FILA DE TICKETS -----
+---------TICKET-----------
+- ID: Tick-1
+- Usuario solicitante: 123.932.250-46
+- Tipo: Software
+- Nome do software: SISTEMA ERP
+- Categoria: BUG
+- Nível do impacto: 2
+- Motivo: ERRO AO GERAR RELATORIO FINANCEIRO
+- Tempo estimado: 5h
+- Status: Aberto
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 123.932.250-46
+- Tipo: Manutencao
+- Nome do item: SERVIDOR PRINCIPAL
+- Estado de conservacao: RUIM
+- Local: SALA 22 BLOCO B
+- Tempo estimado: 6h
+- Status: Aberto
+-------------------------
+
+---------------------------
+
+----- BANCO DE TECNICOS -----
+--------------------
+- Nome: JAYCE BARBOSA
+- CPF: 854.632.894-20
+- Data de Nascimento: 22/2/1990
+- Telefone: (37)9938-3382
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 2000.00
+- Disponibilidade: 5h
+- Tempo Trabalhado: 0h
+--------------------
+- Nome: HEIMERDINGER GARCIA
+- CPF: 456.987.123-96
+- Data de Nascimento: 20/10/1945
+- Telefone: (90)99876-1234
+- Genero: MASCULINO
+- Area de Atuacao: GERAL
+- Salario: 3500.00
+- Disponibilidade: 3h
+- Tempo Trabalhado: 0h
+----------------------------
+

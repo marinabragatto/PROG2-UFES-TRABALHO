@@ -59,7 +59,7 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
                 continue;
             }
             int passouPorTodosTec = 0; // Conta por quantos técnicos passou um ticket
-            for(;passouPorTodosTec<VectorSize(listaTec) && k < VectorSize(listaTec); ){
+            while(passouPorTodosTec<VectorSize(listaTec) && k < VectorSize(listaTec)){
                 Tecnico * tecAnalise;
                 tecAnalise = VectorGet(listaTec, k);
                 if(tecnicoPodePegarTicket(tecAnalise, ticketAtual)){
@@ -72,10 +72,14 @@ void operacaoE(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
                 else{ 
                     passouPorTodosTec++;
                     k++;
-                    if(k >= VectorSize(listaTec) && passouPorTodosTec < VectorSize(listaTec)){
+                    if(k >= VectorSize(listaTec)){
                         k = 0;
                     }
                 }
+            }
+            if(getStatusTicket(ticketAtual) == 'A' && k >= VectorSize(listaTec) ){
+                //Chegou ao fim da lista e o ticket continuou em aberto
+                k = 0;
             }
             if(getStatusTicket(ticketAtual) == 'F' && k >= VectorSize(listaTec)){
                 //Conseguiu achar o tecnico e o ticket foi finalizado, mas esse era o ultimo tecnico da lista, entao iniciamos de novo o loop
@@ -177,7 +181,6 @@ Fila *  operacaoA(Fila  * fila, Vector * listaUsuarios){
            if(getStatusTicket(ticketAtual) == 'A' && k >= VectorSize(listaTec) ){
                 //Chegou ao fim da lista e o ticket continuou em aberto
                 k = 0;
-        
             }
             else if(getStatusTicket(ticketAtual) == 'F' && k < VectorSize(listaTec)){
                 //Conseguiu achar o tecnico e o ticket foi finalizado
