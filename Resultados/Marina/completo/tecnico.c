@@ -79,10 +79,11 @@ void desalocaTecnico(void *t){
 }
 
 void notificaTecnico(void *dado){
+    Tecnico * tec = ((Tecnico*)dado);
     printf("--------------------\n");
-    printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", ((Tecnico*)dado)->nome, ((Tecnico*)dado)->cpf);
-    imprimeData(((Tecnico*)dado)->data);
-    printf("- Telefone: %s\n- Genero: %s\n- Area de Atuacao: %s\n- Salario: %.2f\n- Disponibilidade: %dh\n- Tempo Trabalhado: %dh\n",((Tecnico*)dado)->telefone, ((Tecnico*)dado)->genero, ((Tecnico*)dado)->areaAtuacao, ((Tecnico*)dado)->salario, ((Tecnico*)dado)->disponibilidadeTrab, ((Tecnico*)dado)->tempoTrabalhado);
+    printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", tec->nome, tec->cpf);
+    imprimeData(tec->data);
+    printf("- Telefone: %s\n- Genero: %s\n- Area de Atuacao: %s\n- Salario: %.2f\n- Disponibilidade: %dh\n- Tempo Trabalhado: %dh\n",tec->telefone, tec->genero, tec->areaAtuacao, tec->salario, tec->disponibilidadeTrab, tec->tempoTrabalhado);
 }
 
 float getSalarioTecnico(void *dado){
