@@ -99,8 +99,8 @@ void desalocaManutencao(void *m){
 }
 
 void notificaManutencao(void *dado){
-
-    printf("- Tipo: Manutencao\n- Nome do item: %s\n- Estado de conservacao: %s\n- Local: %s\n- Tempo estimado: %dh\n", ((Manutencao*)dado)->nome, ((Manutencao*)dado)->estado, ((Manutencao*)dado)->localizacao, ((Manutencao*)dado)->tempoEstimado);
+    Manutencao * manum = ((Manutencao*)dado);
+    printf("- Tipo: Manutencao\n- Nome do item: %s\n- Estado de conservacao: %s\n- Local: %s\n- Tempo estimado: %dh\n", manum->nome, manum->estado, manum->localizacao, manum->tempoEstimado);
 
 }
 

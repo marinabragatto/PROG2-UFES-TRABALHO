@@ -10,7 +10,7 @@ void imprimeBancoUsuarios(Vector * listaUsuarios){
     for(i = 0; i < tamanho; i++){
         imprimeElementoVetorDeIdx(listaUsuarios, notificaUsuario, i);
     }
-    printf("----------------------------\n");
+    printf("----------------------------\n\n");
 }      
 
 void imprimeBancoTecnicos(Vector * listaTec){
@@ -20,7 +20,7 @@ void imprimeBancoTecnicos(Vector * listaTec){
     for(i = 0; i < tamanho; i++){
         imprimeElementoVetorDeIdx(listaTec, notificaTecnico, i);
     }
-    printf("----------------------------\n");
+    printf("----------------------------\n\n");
 }
 
 void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Fila * fila){

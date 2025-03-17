@@ -197,6 +197,7 @@
 - Setor: FINANCEIRO
 - Tickets solicitados: 1
 ----------------------------
+
 ----- BANCO DE TECNICOS -----
 --------------------
 - Nome: JAYCE BARBOSA
@@ -259,6 +260,7 @@
 - Disponibilidade: 2h
 - Tempo Trabalhado: 8h
 ----------------------------
+
 ----- RANKING DE TECNICOS -----
 --------------------
 - Nome: YASUO FERREIRA

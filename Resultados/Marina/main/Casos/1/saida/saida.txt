@@ -32,6 +32,7 @@
 - Setor: VENDAS
 - Tickets solicitados: 0
 ----------------------------
+
 ----- BANCO DE TECNICOS -----
 --------------------
 - Nome: JAYCE BARBOSA
@@ -64,3 +65,4 @@
 - Disponibilidade: 10h
 - Tempo Trabalhado: 0h
 ----------------------------
+

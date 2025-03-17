@@ -71,9 +71,10 @@ void desalocaUsuario(void *u){
 
 void notificaUsuario(void *dado){
     printf("--------------------\n");
-    printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", ((Usuario*)dado)->nome, ((Usuario*)dado)->cpf);
-    imprimeData(((Usuario*)dado)->data);
-    printf("- Telefone: %s\n- Genero: %s\n- Setor: %s\n- Tickets solicitados: %d\n", ((Usuario*)dado)->telefone, ((Usuario*)dado)->genero, ((Usuario*)dado)->setor, ((Usuario*)dado)->qtdTicketsSolicitados);
+    Usuario * user = ((Usuario*)dado);
+    printf("- Nome: %s\n- CPF: %s\n- Data de Nascimento: ", user->nome, user->cpf);
+    imprimeData(user->data);
+    printf("- Telefone: %s\n- Genero: %s\n- Setor: %s\n- Tickets solicitados: %d\n", user->telefone, user->genero, user->setor, user->qtdTicketsSolicitados);
 }
 
 int comparaUsuariooECpf(Usuario * user, char * cpf){

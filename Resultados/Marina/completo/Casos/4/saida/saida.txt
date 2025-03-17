@@ -64,6 +64,7 @@
 - Setor: MARKETING
 - Tickets solicitados: 0
 ----------------------------
+
 ----- BANCO DE TECNICOS -----
 --------------------
 - Nome: ZED SILVA
@@ -106,6 +107,7 @@
 - Disponibilidade: 22h
 - Tempo Trabalhado: 0h
 ----------------------------
+
 ----- FILA DE TICKETS -----
 ---------TICKET-----------
 - ID: Tick-1

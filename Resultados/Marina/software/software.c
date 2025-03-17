@@ -82,5 +82,6 @@ void desalocaSoftware(void *s){
 }
 
 void notificaSoftware(void *dado){
-    printf("- Tipo: Software\n- Nome do software: %s\n- Categoria: %s\n- Nível do impacto: %d\n- Motivo: %s\n- Tempo estimado: %dh\n", ((Software*)dado)->nome, ((Software*)dado)->categoria, ((Software*)dado)->impacto, ((Software*)dado)->motivo, ((Software*)dado)->tempoEstimado);
+    Software * soft = ((Software*)dado);
+    printf("- Tipo: Software\n- Nome do software: %s\n- Categoria: %s\n- Nível do impacto: %d\n- Motivo: %s\n- Tempo estimado: %dh\n", soft->nome, soft->categoria, soft->impacto, soft->motivo, soft->tempoEstimado);
 }

@@ -71,6 +71,7 @@ void desalocaOutros(void *o){
 
 
 void notificaOutros(void *dado){
-    printf("- Tipo: Outros\n- Descricao: %s\n- Local: %s\n- Nivel de Dificuldade: %d\n- Tempo Estimado: %dh\n", ((Outros*)dado)->descricao, ((Outros*)dado)->local, ((Outros*)dado)->nivelDif, ((Outros*)dado)->tempoEstimado);
+    Outros  * out = ((Outros*)dado);
+    printf("- Tipo: Outros\n- Descricao: %s\n- Local: %s\n- Nivel de Dificuldade: %d\n- Tempo Estimado: %dh\n", out->descricao, out->local, out->nivelDif, out->tempoEstimado);
 
 }

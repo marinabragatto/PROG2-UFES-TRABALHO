@@ -64,6 +64,7 @@
 - Setor: MARKETING
 - Tickets solicitados: 0
 ----------------------------
+
 ----- RANKING DE USUARIOS -----
 --------------------
 - Nome: RIVEN SOUZA
