@@ -38,7 +38,7 @@ int getTempoTrabalhadoTecnicos(Tecnico * tecnico);
 
 Tecnico * tecnicoRecebeTicket(Tecnico * tec, Ticket * ticket);
 
-int comparaDoisTecnicosRanking1(void * a, void * b);
+int comparaDoisTecnicosRanking1(const void * a, const void * b);
 
 int tecnicoPodePegarTicket(Tecnico * tec, Ticket * ticket);
 

@@ -38,7 +38,6 @@ void imprimeRelatorio(Vector * listaTec, Vector * listaUsuarios, Fila * fila){
 
 void imprimeFilaTickets(Fila * fila){
     printf("----- FILA DE TICKETS -----\n");
-    int i = 0;
     notificaFila(fila);
     printf("---------------------------\n\n");
 }

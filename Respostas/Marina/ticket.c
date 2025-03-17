@@ -82,6 +82,7 @@ char getStatusTicket(Ticket *t){
     else if(t->finalizado == 0){
         return 'A';
     }
+    return 0;
 }
 
 void desalocaTicket(Ticket *doc){

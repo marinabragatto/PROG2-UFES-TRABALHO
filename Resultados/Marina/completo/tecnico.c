@@ -126,7 +126,7 @@ char * getAreaAtuacaoTecnico(Tecnico * tecnico){
 
 
 
-int comparaDoisTecnicosRanking1(void * a, void * b){
+int comparaDoisTecnicosRanking1(const void * a, const void * b){
     
     // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
     Tecnico *tec1 = *(Tecnico **)a;

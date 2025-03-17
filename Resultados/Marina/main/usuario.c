@@ -111,7 +111,7 @@ char * getCpfUsuario(Usuario * user){
     return user->cpf;
 }
 
-int comparaDoisUsuariosRanking1(void * a, void * b){
+int comparaDoisUsuariosRanking1(const void * a, const void * b){
     // Convertendo os ponteiros genéricos para ponteiros para ponteiros de Tecnico
     Usuario *us1 = *(Usuario **)a;
     Usuario *us2 = *(Usuario **)b;

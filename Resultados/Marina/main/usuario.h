@@ -32,7 +32,7 @@ void incrementaQtdTicketsSolicitados(Usuario * user);
 
 char * getCpfUsuario(Usuario * user);
 
-int comparaDoisUsuariosRanking1(void * a, void * b);
+int comparaDoisUsuariosRanking1(const void * a, const void * b);
 
 
 #endif

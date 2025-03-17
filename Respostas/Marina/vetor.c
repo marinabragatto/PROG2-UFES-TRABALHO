@@ -1,4 +1,5 @@
 #include "vetor.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 
